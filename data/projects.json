@@ -18,21 +18,153 @@
     ]
   },
   {
+    "slug": "coastal-forager",
+    "name": "Coastal Forager",
+    "tagline": "Where and when to go shellfishing in Washington State.",
+    "description": [
+      "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
+      "Finds the next day the tide is low enough during the hours you want to be out, and rates each day.",
+      "Push alerts for good days at your favorite beaches, plus a home-screen widget."
+    ],
+    "icon": "assets/icons/coastal-forager.png",
+    "skills": ["TypeScript", "Mobile apps", "Data pipelines", "Postgres", "GitHub Actions"],
+    "stack": ["Expo / React Native", "TypeScript", "Supabase", "PostGIS", "Deno edge functions"],
+    "links": [
+      { "label": "Download Android APK", "url": "https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/costal_forager" }
+    ]
+  },
+  {
+    "slug": "tidewidget",
+    "name": "Tide Widget",
+    "tagline": "A weather-map-style tide map and a home-screen widget for your beach.",
+    "description": [
+      "NOAA tide stations drawn as colored dots; drag a slider across the next 24 hours and watch the tide move along the coast.",
+      "Tap a station for its tide curve, a 7-day chart and every high and low for the week.",
+      "An Android widget shows your beach's next high and low and stays correct offline."
+    ],
+    "icon": "assets/icons/tidewidget.svg",
+    "skills": ["Kotlin", "Mobile apps", "Maps & geospatial", "GitHub Actions"],
+    "stack": ["Kotlin", "Jetpack Compose", "Glance widgets", "Leaflet", "NOAA CO-OPS API"],
+    "links": [
+      { "label": "Open web version", "url": "https://mendus59.github.io/TideWidget/", "primary": true },
+      { "label": "Download Android APK", "url": "https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk" },
+      { "label": "Source", "url": "https://github.com/mendus59/TideWidget" }
+    ]
+  },
+  {
+    "slug": "argument-mapper",
+    "name": "Argument Mapper",
+    "tagline": "Parrhesia: lay out debates as shared argument maps and debate more constructively.",
+    "description": [
+      "Two people or teams build a shared map of premises, reasons, objections and conclusions, and record where each side stands on every box.",
+      "Fork a pivotal premise into its own sub-debate.",
+      "Honest-debate tools: restate before you rebut, confidence on every stance, crux highlighting and a \"fair point\" concession."
+    ],
+    "icon": "assets/icons/parrhesia.svg",
+    "skills": ["TypeScript", "React", "Firebase", "GitHub Actions"],
+    "stack": ["React", "TypeScript", "Vite", "React Flow", "Firebase Auth", "Firestore", "Vitest"],
+    "links": [
+      { "label": "Open Argument Mapper", "url": "https://mendus59.github.io/argument_map/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/argument_map" }
+    ]
+  },
+  {
+    "slug": "gatchi-evolution",
+    "name": "Gatchi Evolution",
+    "tagline": "Raise a pocket pet that learns by evolution.",
+    "description": [
+      "Your Gatchi plays ten mini-games on its own, and a genetic algorithm in your browser reshapes its body and brain to get better at whichever one you train.",
+      "Training runs in a Web Worker; matches are deterministic so the server can re-simulate versus games to referee them.",
+      "Accounts, cloud backups, friends and a leaderboard."
+    ],
+    "icon": "assets/icons/gatchi.svg",
+    "skills": ["JavaScript", "AI & machine learning", "Game development", "Postgres", "GitHub Actions"],
+    "stack": ["JavaScript", "Genetic algorithms", "Web Workers", "Node", "Supabase"],
+    "links": [
+      { "label": "Play Gatchi Evolution", "url": "https://mendus59.github.io/GatchiEvolution/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/GatchiEvolution" }
+    ]
+  },
+  {
     "slug": "is_this_normal",
     "name": "IsThisNormal",
     "tagline": "Is a Supreme Court ruling, executive action or contentious law \"normal\"?",
     "description": [
       "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
       "Free daily ingestion of public records (Federal Register, Congress, Supreme Court opinions) into a citation graph.",
-      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget.",
-      "A static site with no cookies or analytics."
+      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget."
     ],
     "icon": "assets/icons/is_this_normal.svg",
-    "skills": ["Python", "Data pipelines", "AI & LLMs", "Postgres", "GitHub Actions"],
+    "skills": ["Python", "Data pipelines", "AI & machine learning", "Postgres", "GitHub Actions"],
     "stack": ["Python", "Postgres (Neon)", "Cloudflare R2", "Astro", "LLM analysis"],
     "links": [
       { "label": "Open IsThisNormal", "url": "https://mendus59.github.io/is_this_normal/", "primary": true },
       { "label": "Source", "url": "https://github.com/mendus59/is_this_normal" }
+    ]
+  },
+  {
+    "slug": "nominated",
+    "name": "Nominated",
+    "tagline": "Track every Academy Award–nominated film you've seen.",
+    "description": [
+      "All 5,264 nominated films and 10,876 nominations since the 1st Academy Awards, with filters by person, category, genre and year.",
+      "Mark films seen, rate and review them, and save a default search.",
+      "Add friends to compare lists and find a film neither of you has seen."
+    ],
+    "icon": "assets/icons/nominated.svg",
+    "skills": ["JavaScript", "Firebase", "Data pipelines", "GitHub Actions"],
+    "stack": ["JavaScript", "Firebase Auth", "Firestore", "Python", "TMDB API"],
+    "links": [
+      { "label": "Open Nominated", "url": "https://mendus59.github.io/academy_award_tracker/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/academy_award_tracker" }
+    ]
+  },
+  {
+    "slug": "mtg-collection-viewer",
+    "name": "MTG Collection Viewer",
+    "tagline": "Share a Magic: The Gathering collection with card images and Scryfall-style search.",
+    "description": [
+      "Turns a ManaBox export into a fast static site; all searching happens in the browser.",
+      "Prices refresh weekly from TCGplayer, Card Kingdom and MTGGoldfish, taking the highest for each finish."
+    ],
+    "icon": "assets/icons/mtg.svg",
+    "skills": ["Python", "JavaScript", "Data pipelines", "GitHub Actions"],
+    "stack": ["Python", "JavaScript", "Scryfall API"],
+    "links": [
+      { "label": "Open the collection", "url": "https://mendus59.github.io/manabox-viewer/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/manabox-viewer" }
+    ]
+  },
+  {
+    "slug": "action-mimic",
+    "name": "Action Mimic",
+    "tagline": "A Chrome extension that records and replays front-end QA actions.",
+    "description": [
+      "Records clicks, typing, selects and navigation, including inside cross-origin iframes, and saves them as a script scoped to a site.",
+      "Replays a script on demand, highlighting each step; edit values, selectors and waits without re-recording."
+    ],
+    "icon": "assets/icons/action-mimic.png",
+    "skills": ["JavaScript", "Browser extensions", "Testing & QA"],
+    "stack": ["JavaScript", "Chrome Manifest V3"],
+    "links": [
+      { "label": "Install instructions", "url": "https://github.com/mendus59/action-mimic#install-unpacked", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/action-mimic" }
+    ]
+  },
+  {
+    "slug": "fedreg",
+    "name": "Executive Examiner",
+    "tagline": "Presidential documents from the Federal Register, collected and summarized.",
+    "description": [
+      "Pulls executive orders and other presidential documents from the Federal Register API and publishes them with summaries and PDF links."
+    ],
+    "icon": "assets/icons/fedreg.svg",
+    "skills": ["Python", "Data pipelines", "GitHub Actions"],
+    "stack": ["Python", "Federal Register API", "JavaScript"],
+    "links": [
+      { "label": "Open Executive Examiner", "url": "https://www.executiveexaminer.com/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/fedreg" }
     ]
   }
 ]
