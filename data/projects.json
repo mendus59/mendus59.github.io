@@ -65,13 +65,17 @@
     ],
     "links": [
       {
-        "label": "Open Coastal Forager",
-        "url": "apps/coastal-forager/",
+        "label": "Open web app",
+        "url": "https://mendus59.github.io/costal_forager/",
         "primary": true
       },
       {
         "label": "Download Android APK",
         "url": "https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk"
+      },
+      {
+        "label": "About & install",
+        "url": "apps/coastal-forager/"
       },
       {
         "label": "Source",
