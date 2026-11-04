@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Action Mimic Privacy Policy</title>
+  <link rel="icon" href="../icon.png" type="image/png">
+  <link rel="stylesheet" href="../../app-page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../">← Action Mimic</a>
+
+    <h1>Action Mimic Privacy Policy</h1>
+    <p class="muted"><em>Last updated: October 14, 2026</em></p>
+
+    <p>Action Mimic is a Chrome extension that records the actions you take on a web page and replays them later. This policy explains what data the extension handles and what happens to it.</p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>Action Mimic <strong>does not collect, transmit, sell, or share any data</strong>.</li>
+      <li>Everything the extension records stays in your browser's local extension storage (<code>chrome.storage.local</code>) on your own device.</li>
+      <li>The extension contains no analytics, no tracking, no advertising, and no remote servers. It makes no network requests of its own.</li>
+    </ul>
+
+    <h2>What the extension handles, and why</h2>
+    <p>When <strong>you</strong> start a recording, Action Mimic captures the actions you take on the page so it can replay them later:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Purpose</th><th>Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>Elements you click, and how to find them again (CSS selectors, element labels and visible text)</td><td>To click the same elements during replay</td><td>Stored locally on your device</td></tr>
+          <tr><td>Values you type or choose in form fields, checkboxes and dropdowns</td><td>To enter the same values during replay</td><td>Stored locally on your device</td></tr>
+          <tr><td>URLs of the pages and frames where actions happened</td><td>To scope scripts to sites and to replay steps in the right frame</td><td>Stored locally on your device</td></tr>
+          <tr><td>Your extension settings (speed, timeouts, etc.)</td><td>To control playback</td><td>Stored locally on your device</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Recording happens only between when you press <strong>Record</strong> and when you press <strong>Stop</strong>. It is limited to the browser tab you started it in, and a visible "REC" badge and in-page indicator are shown the whole time. Nothing is captured while the extension is idle.</p>
+    <p><strong>Passwords.</strong> By default, the values of password fields are <strong>not</strong> recorded. If you turn on the <em>Record password values</em> setting, they are stored in plain text in local extension storage and included in any export you make.</p>
+
+    <h2>Exports</h2>
+    <p>You can choose to export scripts to a JSON file, for example to move them to another computer. Export is always started by you, the file is saved to your device through your browser's normal download process, and it is never sent anywhere by the extension. Anything you then do with that file, such as emailing it, is under your control and outside the extension.</p>
+
+    <h2>Data retention and deletion</h2>
+    <p>Data stays until you delete it. You can delete individual scripts or all of them on the extension's <strong>Manage scripts</strong> page. Uninstalling the extension removes all of its stored data from your browser.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Access to all websites.</strong> QA work happens on arbitrary sites, including internal, staging and <code>localhost</code> environments, and often inside iframes from other domains. The extension needs this access to record and replay actions wherever you choose to use it. It does nothing on a page unless you are recording or have started a replay there.</li>
+      <li><strong>storage.</strong> Saves your scripts and settings locally.</li>
+      <li><strong>scripting.</strong> Loads the recorder/player into tabs that were already open when the extension was installed or updated.</li>
+      <li><strong>webNavigation.</strong> Finds the correct iframe for each replayed step and notices URLs you type into the address bar while recording.</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>Action Mimic is a developer and QA tool. It is not directed at children and collects no data from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be published at this same address with a new "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <strong>patmendus@patmendus.com</strong></p>
+  </main>
+
+  <footer class="wrap muted">Made by <a href="../../../">Pat Mendus</a></footer>
+</body>
+</html>
