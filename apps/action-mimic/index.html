@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Action Mimic · Pat Mendus</title>
+  <meta name="description" content="A Chrome extension that records the steps you take on a web page and replays them in one click.">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="../app-page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../../">← All projects</a>
+
+    <header class="hero">
+      <img src="icon.png" alt="" width="88" height="88">
+      <div>
+        <h1>Action Mimic</h1>
+        <p>Record the steps you take on a web page and replay them in one click.</p>
+      </div>
+    </header>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/mendus59/action-mimic/archive/refs/heads/main.zip">Download for Chrome (.zip)</a>
+      <a class="btn" href="#install">How to install</a>
+      <a class="btn" href="https://github.com/mendus59/action-mimic">Source on GitHub</a>
+    </div>
+    <p class="muted">Free, for Chrome 116 or newer. A Chrome Web Store listing is on the way.</p>
+
+    <p>Action Mimic is built for QA testers and developers who keep re-entering the same data to reach a hard-to-reproduce state, such as a long form that's only reachable after logging in with the right permissions, or a form embedded in an iframe from another service.</p>
+
+    <h2>How it works</h2>
+    <ol>
+      <li>Get the page into the state you want to start from.</li>
+      <li>Click <strong>Record</strong> (or press <code>Alt+Shift+R</code>), then use the page normally.</li>
+      <li>Click <strong>Stop</strong>, name the script, and choose which sites it's available on.</li>
+      <li>Next time, open Action Mimic on that site and click <strong>Run</strong>. Every click, keystroke and selection is replayed while you watch, with each element highlighted as it's acted on.</li>
+    </ol>
+
+    <div class="shots">
+      <figure><img src="img/1-record.webp" alt="Recording actions on a form, with the in-page REC indicator" width="1280" height="800" loading="lazy"><figcaption>Record clicks, typing and choices, even inside cross-origin iframes.</figcaption></figure>
+      <figure><img src="img/2-save.webp" alt="Saving a script and choosing which sites it applies to" width="1280" height="800" loading="lazy"><figcaption>Scope each script to a host, a domain, a page, a URL prefix, a regex or every site.</figcaption></figure>
+      <figure><img src="img/3-run.webp" alt="The popup listing scripts for the current site with Run buttons" width="1280" height="800" loading="lazy"><figcaption>The popup shows only the scripts that apply to the page you're on.</figcaption></figure>
+      <figure><img src="img/4-playback.webp" alt="Playback in progress, highlighting the element being filled" width="1280" height="800" loading="lazy"><figcaption>Watch each step replay, with progress on the toolbar badge.</figcaption></figure>
+      <figure><img src="img/5-edit.webp" alt="The script editor with editable step values" width="1280" height="800" loading="lazy"><figcaption>Change test data, selectors and waits without re-recording.</figcaption></figure>
+    </div>
+
+    <h2>What it records</h2>
+    <ul>
+      <li>Clicks on buttons, links and any other element</li>
+      <li>Typing in inputs, text areas and rich-text editors (only the final value of each field is kept)</li>
+      <li>Dropdown choices, checkboxes and radio buttons</li>
+      <li>Enter and Escape key presses, and URLs you type into the address bar</li>
+      <li>All of the above inside iframes, including cross-origin ones, and in open shadow DOM</li>
+    </ul>
+
+    <h2 id="install">Install</h2>
+    <div class="panel">
+      <ol>
+        <li><a href="https://github.com/mendus59/action-mimic/archive/refs/heads/main.zip">Download the .zip</a> and unzip it.</li>
+        <li>Open <code>chrome://extensions</code> and turn on <strong>Developer mode</strong> (top right).</li>
+        <li>Click <strong>Load unpacked</strong> and pick the unzipped folder, the one containing <code>manifest.json</code>.</li>
+        <li>Pin <strong>Action Mimic</strong> to the toolbar from the puzzle-piece menu.</li>
+      </ol>
+    </div>
+    <p class="muted">To update, download the .zip again, replace the folder, and click the reload icon on the extension's card. Your scripts are kept.</p>
+
+    <h2>Private by design</h2>
+    <p>Everything stays in your browser. There are no accounts, servers, analytics or tracking, and password fields aren't recorded unless you turn that on. Read the <a href="privacy/">privacy policy</a>.</p>
+  </main>
+
+  <footer class="wrap muted">Made by <a href="../../">Pat Mendus</a></footer>
+</body>
+</html>

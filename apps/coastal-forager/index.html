@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coastal Forager · Pat Mendus</title>
+  <meta name="description" content="Where and when to go shellfishing in Washington State.">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="../app-page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../../">← All projects</a>
+
+    <header class="hero">
+      <img src="icon.png" alt="" width="88" height="88">
+      <div>
+        <h1>Coastal Forager</h1>
+        <p>Where and when to go shellfishing in Washington State.</p>
+      </div>
+    </header>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk">Download for Android (.apk)</a>
+      <a class="btn" href="#install">How to install</a>
+      <a class="btn" href="https://github.com/mendus59/costal_forager">Source on GitHub</a>
+    </div>
+    <p class="muted">Free. Android for now; the app is also built for iOS.</p>
+
+    <p>Coastal Forager shows which public beaches are safe and in season for each species, and finds the next day when the tide is low enough during the hours you want to be out.</p>
+
+    <div class="note">
+      <strong>Guidance only.</strong> Before you harvest, check the <a href="https://doh.wa.gov/shellfishsafety">DOH shellfish safety map</a> or call the biotoxin hotline at 1-800-562-5632, and confirm the WDFW season.
+    </div>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Today:</strong> the best beaches and species for today, rated Great, Good, Marginal or Poor.</li>
+      <li><strong>Beaches:</strong> every public beach with its safe-to-harvest status, open seasons and the species commonly found there.</li>
+      <li><strong>Next ideal day:</strong> the next date when the low tide is low enough and falls in your hours (daylight by default, or a custom range like 6pm–10pm).</li>
+      <li><strong>Alerts and widget:</strong> push alerts for good days at your favorite beaches, and a home-screen widget with today's best rating.</li>
+    </ul>
+
+    <h2>How a day is rated</h2>
+    <ol>
+      <li><strong>Gate.</strong> The WDFW season must be open, DOH must not have the species closed, and razor clams need an announced dig. Failing days show as <strong>Closed</strong>, never as a low score.</li>
+      <li><strong>Tide fit.</strong> Full marks at or below the species' ideal low tide, none at or above its marginal height, and in between linearly. You can override both per species.</li>
+      <li><strong>Window fit.</strong> The share of the harvest window around low tide that falls in your hours.</li>
+    </ol>
+    <p class="muted">Score = tide fit × window fit. Great is 0.8 or more, Good 0.5, Marginal 0.2.</p>
+
+    <h2>Where the data comes from</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Source</th><th>Updated</th></tr></thead>
+        <tbody>
+          <tr><td>Beaches, safe-to-harvest status, closures, clam and oyster seasons</td><td>WA Department of Health</td><td>Hourly</td></tr>
+          <tr><td>Tide predictions</td><td>NOAA CO-OPS</td><td>Daily</td></tr>
+          <tr><td>Razor clam dig days</td><td>WDFW</td><td>Daily</td></tr>
+          <tr><td>Species common on each beach</td><td>WDFW beach harvest profiles</td><td>Continuously, in batches</td></tr>
+          <tr><td>Sunrise and sunset</td><td>Computed in the app</td><td>n/a</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="install">Install on Android</h2>
+    <div class="panel">
+      <ol>
+        <li>On your phone, tap <a href="https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk">Download for Android</a>.</li>
+        <li>Open the downloaded <code>coastal-forager.apk</code>. If Android asks, allow your browser to install unknown apps.</li>
+        <li>Tap <strong>Install</strong>. New versions install over the old one, so your favorites are kept.</li>
+      </ol>
+    </div>
+    <p class="muted">This build isn't on the Play Store. Push alerts aren't switched on in it yet; the widget, background refresh and everything else work. <a href="https://github.com/mendus59/costal_forager/releases/tag/android-latest">Release notes</a></p>
+
+    <h2>Built with</h2>
+    <ul class="chips">
+      <li>Expo / React Native</li><li>TypeScript</li><li>Supabase</li><li>Postgres + PostGIS</li><li>Deno edge functions</li><li>pg_cron</li><li>GitHub Actions</li>
+    </ul>
+  </main>
+
+  <footer class="wrap muted">Made by <a href="../../">Pat Mendus</a></footer>
+</body>
+</html>

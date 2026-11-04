@@ -10,11 +10,33 @@
       "Installable as an app and works offline."
     ],
     "icon": "assets/icons/mushmap.svg",
-    "skills": ["TypeScript", "Maps & geospatial", "Data pipelines", "Firebase", "PWA", "GitHub Actions"],
-    "stack": ["TypeScript", "Vite", "MapLibre GL", "H3", "Firebase", "Python", "Vitest"],
+    "skills": [
+      "TypeScript",
+      "Maps & geospatial",
+      "Data pipelines",
+      "Firebase",
+      "PWA",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "TypeScript",
+      "Vite",
+      "MapLibre GL",
+      "H3",
+      "Firebase",
+      "Python",
+      "Vitest"
+    ],
     "links": [
-      { "label": "Open MushMap", "url": "https://mendus59.github.io/mushmap/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/mushmap" }
+      {
+        "label": "Open MushMap",
+        "url": "https://mendus59.github.io/mushmap/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/mushmap"
+      }
     ]
   },
   {
@@ -27,11 +49,34 @@
       "Push alerts for good days at your favorite beaches, plus a home-screen widget."
     ],
     "icon": "assets/icons/coastal-forager.png",
-    "skills": ["TypeScript", "Mobile apps", "Data pipelines", "Postgres", "GitHub Actions"],
-    "stack": ["Expo / React Native", "TypeScript", "Supabase", "PostGIS", "Deno edge functions"],
+    "skills": [
+      "TypeScript",
+      "Mobile apps",
+      "Data pipelines",
+      "Postgres",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Expo / React Native",
+      "TypeScript",
+      "Supabase",
+      "PostGIS",
+      "Deno edge functions"
+    ],
     "links": [
-      { "label": "Download Android APK", "url": "https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/costal_forager" }
+      {
+        "label": "Open Coastal Forager",
+        "url": "apps/coastal-forager/",
+        "primary": true
+      },
+      {
+        "label": "Download Android APK",
+        "url": "https://github.com/mendus59/costal_forager/releases/download/android-latest/coastal-forager.apk"
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/costal_forager"
+      }
     ]
   },
   {
@@ -44,12 +89,33 @@
       "An Android widget shows your beach's next high and low and stays correct offline."
     ],
     "icon": "assets/icons/tidewidget.svg",
-    "skills": ["Kotlin", "Mobile apps", "Maps & geospatial", "GitHub Actions"],
-    "stack": ["Kotlin", "Jetpack Compose", "Glance widgets", "Leaflet", "NOAA CO-OPS API"],
+    "skills": [
+      "Kotlin",
+      "Mobile apps",
+      "Maps & geospatial",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Glance widgets",
+      "Leaflet",
+      "NOAA CO-OPS API"
+    ],
     "links": [
-      { "label": "Open web version", "url": "https://mendus59.github.io/TideWidget/", "primary": true },
-      { "label": "Download Android APK", "url": "https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk" },
-      { "label": "Source", "url": "https://github.com/mendus59/TideWidget" }
+      {
+        "label": "Open web version",
+        "url": "https://mendus59.github.io/TideWidget/",
+        "primary": true
+      },
+      {
+        "label": "Download Android APK",
+        "url": "https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk"
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/TideWidget"
+      }
     ]
   },
   {
@@ -62,11 +128,31 @@
       "Honest-debate tools: restate before you rebut, confidence on every stance, crux highlighting and a \"fair point\" concession."
     ],
     "icon": "assets/icons/parrhesia.svg",
-    "skills": ["TypeScript", "React", "Firebase", "GitHub Actions"],
-    "stack": ["React", "TypeScript", "Vite", "React Flow", "Firebase Auth", "Firestore", "Vitest"],
+    "skills": [
+      "TypeScript",
+      "React",
+      "Firebase",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "React Flow",
+      "Firebase Auth",
+      "Firestore",
+      "Vitest"
+    ],
     "links": [
-      { "label": "Open Argument Mapper", "url": "https://mendus59.github.io/argument_map/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/argument_map" }
+      {
+        "label": "Open Argument Mapper",
+        "url": "https://mendus59.github.io/argument_map/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/argument_map"
+      }
     ]
   },
   {
@@ -79,11 +165,30 @@
       "Accounts, cloud backups, friends and a leaderboard."
     ],
     "icon": "assets/icons/gatchi.svg",
-    "skills": ["JavaScript", "AI & machine learning", "Game development", "Postgres", "GitHub Actions"],
-    "stack": ["JavaScript", "Genetic algorithms", "Web Workers", "Node", "Supabase"],
+    "skills": [
+      "JavaScript",
+      "AI & machine learning",
+      "Game development",
+      "Postgres",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "JavaScript",
+      "Genetic algorithms",
+      "Web Workers",
+      "Node",
+      "Supabase"
+    ],
     "links": [
-      { "label": "Play Gatchi Evolution", "url": "https://mendus59.github.io/GatchiEvolution/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/GatchiEvolution" }
+      {
+        "label": "Play Gatchi Evolution",
+        "url": "https://mendus59.github.io/GatchiEvolution/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/GatchiEvolution"
+      }
     ]
   },
   {
@@ -96,11 +201,30 @@
       "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget."
     ],
     "icon": "assets/icons/is_this_normal.svg",
-    "skills": ["Python", "Data pipelines", "AI & machine learning", "Postgres", "GitHub Actions"],
-    "stack": ["Python", "Postgres (Neon)", "Cloudflare R2", "Astro", "LLM analysis"],
+    "skills": [
+      "Python",
+      "Data pipelines",
+      "AI & machine learning",
+      "Postgres",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "Postgres (Neon)",
+      "Cloudflare R2",
+      "Astro",
+      "LLM analysis"
+    ],
     "links": [
-      { "label": "Open IsThisNormal", "url": "https://mendus59.github.io/is_this_normal/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/is_this_normal" }
+      {
+        "label": "Open IsThisNormal",
+        "url": "https://mendus59.github.io/is_this_normal/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/is_this_normal"
+      }
     ]
   },
   {
@@ -113,11 +237,29 @@
       "Add friends to compare lists and find a film neither of you has seen."
     ],
     "icon": "assets/icons/nominated.svg",
-    "skills": ["JavaScript", "Firebase", "Data pipelines", "GitHub Actions"],
-    "stack": ["JavaScript", "Firebase Auth", "Firestore", "Python", "TMDB API"],
+    "skills": [
+      "JavaScript",
+      "Firebase",
+      "Data pipelines",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "JavaScript",
+      "Firebase Auth",
+      "Firestore",
+      "Python",
+      "TMDB API"
+    ],
     "links": [
-      { "label": "Open Nominated", "url": "https://mendus59.github.io/academy_award_tracker/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/academy_award_tracker" }
+      {
+        "label": "Open Nominated",
+        "url": "https://mendus59.github.io/academy_award_tracker/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/academy_award_tracker"
+      }
     ]
   },
   {
@@ -129,11 +271,27 @@
       "Prices refresh weekly from TCGplayer, Card Kingdom and MTGGoldfish, taking the highest for each finish."
     ],
     "icon": "assets/icons/mtg.svg",
-    "skills": ["Python", "JavaScript", "Data pipelines", "GitHub Actions"],
-    "stack": ["Python", "JavaScript", "Scryfall API"],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "Data pipelines",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "JavaScript",
+      "Scryfall API"
+    ],
     "links": [
-      { "label": "Open the collection", "url": "https://mendus59.github.io/manabox-viewer/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/manabox-viewer" }
+      {
+        "label": "Open the collection",
+        "url": "https://mendus59.github.io/manabox-viewer/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/manabox-viewer"
+      }
     ]
   },
   {
@@ -145,11 +303,25 @@
       "Replays a script on demand, highlighting each step; edit values, selectors and waits without re-recording."
     ],
     "icon": "assets/icons/action-mimic.png",
-    "skills": ["JavaScript", "Browser extensions", "Testing & QA"],
-    "stack": ["JavaScript", "Chrome Manifest V3"],
+    "skills": [
+      "JavaScript",
+      "Browser extensions",
+      "Testing & QA"
+    ],
+    "stack": [
+      "JavaScript",
+      "Chrome Manifest V3"
+    ],
     "links": [
-      { "label": "Install instructions", "url": "https://github.com/mendus59/action-mimic#install-unpacked", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/action-mimic" }
+      {
+        "label": "Open Action Mimic",
+        "url": "apps/action-mimic/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/action-mimic"
+      }
     ]
   },
   {
@@ -160,11 +332,26 @@
       "Pulls executive orders and other presidential documents from the Federal Register API and publishes them with summaries and PDF links."
     ],
     "icon": "assets/icons/fedreg.svg",
-    "skills": ["Python", "Data pipelines", "GitHub Actions"],
-    "stack": ["Python", "Federal Register API", "JavaScript"],
+    "skills": [
+      "Python",
+      "Data pipelines",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "Federal Register API",
+      "JavaScript"
+    ],
     "links": [
-      { "label": "Open Executive Examiner", "url": "https://www.executiveexaminer.com/", "primary": true },
-      { "label": "Source", "url": "https://github.com/mendus59/fedreg" }
+      {
+        "label": "Open Executive Examiner",
+        "url": "https://www.executiveexaminer.com/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/fedreg"
+      }
     ]
   }
 ]
