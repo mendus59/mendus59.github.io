@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "mushmap",
+    "name": "MushMap",
+    "tagline": "A mushroom foraging journal and weekly heat map for Washington and Oregon.",
+    "description": [
+      "Log a find from a photo: the time and GPS location come from the photo's EXIF data.",
+      "A weekly likelihood map per species, built from research-grade iNaturalist sightings, USDA host-tree maps, elevation, and this year's rain and temperature against past finds.",
+      "A trail finder that ranks OpenStreetMap trails by the chance of a mushroom along them and how accessible the trail is.",
+      "Installable as an app and works offline."
+    ],
+    "icon": "assets/icons/mushmap.svg",
+    "skills": ["TypeScript", "Maps & geospatial", "Data pipelines", "Firebase", "PWA", "GitHub Actions"],
+    "stack": ["TypeScript", "Vite", "MapLibre GL", "H3", "Firebase", "Python", "Vitest"],
+    "links": [
+      { "label": "Open MushMap", "url": "https://mendus59.github.io/mushmap/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/mushmap" }
+    ]
+  },
+  {
+    "slug": "is_this_normal",
+    "name": "IsThisNormal",
+    "tagline": "Is a Supreme Court ruling, executive action or contentious law \"normal\"?",
+    "description": [
+      "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
+      "Free daily ingestion of public records (Federal Register, Congress, Supreme Court opinions) into a citation graph.",
+      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget.",
+      "A static site with no cookies or analytics."
+    ],
+    "icon": "assets/icons/is_this_normal.svg",
+    "skills": ["Python", "Data pipelines", "AI & LLMs", "Postgres", "GitHub Actions"],
+    "stack": ["Python", "Postgres (Neon)", "Cloudflare R2", "Astro", "LLM analysis"],
+    "links": [
+      { "label": "Open IsThisNormal", "url": "https://mendus59.github.io/is_this_normal/", "primary": true },
+      { "label": "Source", "url": "https://github.com/mendus59/is_this_normal" }
+    ]
+  }
+]
