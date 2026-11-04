@@ -1,1 +1,40 @@
-hello world
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pat Mendus · Projects</title>
+  <meta name="description" content="Projects by Pat Mendus, software engineer.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Pat Mendus</h1>
+      <p class="tagline">Software Engineer by day, <em>literally</em> anything else by night.</p>
+      <nav class="header-links">
+        <a href="https://github.com/mendus59">GitHub</a>
+        <a href="https://www.linkedin.com/in/patrick-mendus">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="projects-heading">
+      <div class="section-head">
+        <h2 id="projects-heading">Projects</h2>
+        <p id="count" class="muted"></p>
+      </div>
+      <div id="filters" class="filters" role="group" aria-label="Filter by skill"></div>
+      <ul id="projects" class="projects"></ul>
+      <noscript><p>Turn on JavaScript to see the projects, or browse them on <a href="https://github.com/mendus59">GitHub</a>.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap muted">© <span id="year"></span> Pat Mendus</div>
+  </footer>
+</body>
+</html>
