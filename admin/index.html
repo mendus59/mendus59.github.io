@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.github.com; img-src 'self' https: data: blob:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <base href="../">
+  <title>Projects admin</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="admin/admin.css">
+  <script type="module" src="admin/admin.js"></script>
+</head>
+<body>
+  <header class="site-header admin-header">
+    <div class="wrap">
+      <h1>Projects admin</h1>
+      <p class="tagline">Show, hide, add, edit and remove the projects on <a href="./">the public page</a>.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Sign in -->
+    <section id="signin" class="panel" hidden>
+      <h2>Sign in with a GitHub token</h2>
+      <p>Changes are saved as commits to <code>data/projects.json</code> in
+        <a href="https://github.com/mendus59/mendus59.github.io">mendus59/mendus59.github.io</a>, which redeploys the site.
+        The token stays in this browser and is only sent to <code>api.github.com</code>.</p>
+      <ol class="steps">
+        <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>.</li>
+        <li>Repository access: <em>Only select repositories</em> → <code>mendus59.github.io</code>.</li>
+        <li>Permissions: <em>Contents</em> → <em>Read and write</em>. Nothing else.</li>
+        <li>Generate it and paste it below.</li>
+      </ol>
+      <form id="signin-form" class="stack-form">
+        <label>Token <input id="token" type="password" autocomplete="off" spellcheck="false" required placeholder="github_pat_…"></label>
+        <label class="check"><input id="remember" type="checkbox"> Remember on this device</label>
+        <div class="row"><button class="btn btn-primary" type="submit">Sign in</button></div>
+        <p id="signin-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Project list -->
+    <section id="list" hidden>
+      <div class="toolbar">
+        <p id="status" class="muted" role="status"></p>
+        <div class="row">
+          <button id="add" class="btn" type="button">Add project</button>
+          <button id="reload" class="btn" type="button">Reload</button>
+          <button id="signout" class="btn" type="button">Sign out</button>
+        </div>
+      </div>
+      <ol id="rows" class="rows"></ol>
+      <div id="publish-bar" class="publish-bar" hidden>
+        <input id="commit-msg" type="text" aria-label="Commit message" placeholder="Describe the change (optional)">
+        <button id="discard" class="btn" type="button">Discard</button>
+        <button id="publish" class="btn btn-primary" type="button">Publish changes</button>
+      </div>
+    </section>
+
+    <!-- Editor -->
+    <section id="editor" hidden>
+      <div class="editor-grid">
+        <form id="edit-form" class="panel stack-form" novalidate>
+          <h2 id="editor-title">Edit project</h2>
+          <label>Name <input name="name" required></label>
+          <label>Slug <small class="muted">short id, letters/numbers/-/_</small>
+            <input name="slug" required pattern="[A-Za-z0-9_-]+"></label>
+          <label>Summary <small class="muted">one line under the title</small><input name="tagline"></label>
+          <label>Short description <small class="muted">one bullet per line</small>
+            <textarea name="description" rows="5"></textarea></label>
+          <label>Tags <small class="muted">comma separated; these become the filter chips</small><input name="skills"></label>
+          <label>Built with <small class="muted">comma separated</small><input name="stack"></label>
+          <fieldset>
+            <legend>Icon</legend>
+            <label>Path or URL <input name="icon" placeholder="assets/icons/my-project.svg"></label>
+            <label>…or upload a square image <input name="iconFile" type="file" accept="image/png,image/svg+xml,image/jpeg,image/webp"></label>
+          </fieldset>
+          <fieldset>
+            <legend>Links</legend>
+            <div id="links"></div>
+            <button id="add-link" class="btn" type="button">Add link</button>
+          </fieldset>
+          <label class="check"><input name="hidden" type="checkbox"> Hidden from the public page</label>
+          <label class="check"><input name="private" type="checkbox"> Show a "Private" badge (don't add a source link)</label>
+          <p id="edit-error" class="error" role="alert"></p>
+          <div class="row">
+            <button class="btn btn-primary" type="submit">Done</button>
+            <button id="cancel-edit" class="btn" type="button">Cancel</button>
+          </div>
+        </form>
+        <div>
+          <h2 class="preview-label muted">Preview</h2>
+          <ul id="preview" class="projects preview"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
