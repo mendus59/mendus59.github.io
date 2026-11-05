@@ -1,5 +1,36 @@
 [
   {
+    "slug": "voidlight",
+    "name": "Voidlight",
+    "tagline": "An original survivor-style bullet hell for the browser.",
+    "description": [
+      "Survive 15 minutes of escalating swarms and three bosses while your gear fires on its own.",
+      "55 items across five slots, each with its own bullet pattern; every item adds its effect to all your bullets, and some effect pairs trigger reactions.",
+      "Fuse maxed items, unlock 11 characters, and spend gold in the Forge on permanent upgrades saved in your browser."
+    ],
+    "icon": "assets/icons/voidlight.svg",
+    "skills": [
+      "JavaScript",
+      "Game development"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML canvas",
+      "localStorage"
+    ],
+    "links": [
+      {
+        "label": "Play Voidlight",
+        "url": "https://mendus59.github.io/voidlight/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/voidlight"
+      }
+    ]
+  },
+  {
     "slug": "mushmap",
     "name": "MushMap",
     "tagline": "A mushroom foraging journal and weekly heat map for Washington and Oregon.",
