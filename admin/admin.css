@@ -11,6 +11,7 @@
   box-shadow: var(--shadow);
 }
 .panel h2 { margin-top: 0; font-size: 1.25rem; }
+#signin { max-width: 760px; }
 .steps { padding-left: 20px; }
 .steps li { margin-bottom: 4px; }
 code { font-size: 0.9em; background: var(--chip); padding: 1px 5px; border-radius: 4px; }
@@ -88,8 +89,13 @@ button.btn:disabled { opacity: 0.45; cursor: default; }
 @media (max-width: 640px) { .publish-bar { flex-wrap: wrap; } .publish-bar input { flex-basis: 100%; } }
 
 .editor-grid { display: grid; gap: 24px; margin-bottom: 48px; }
-@media (min-width: 900px) { .editor-grid { grid-template-columns: 1fr 1fr; align-items: start; } .editor-grid > div { position: sticky; top: 16px; } }
+@media (min-width: 900px) { .editor-grid { grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr); align-items: start; } .editor-grid > div { position: sticky; top: 16px; } }
 .preview-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; }
 .preview { grid-template-columns: 1fr !important; }
 .link-row { display: grid; grid-template-columns: 1fr 1.6fr auto auto auto; gap: 6px; align-items: center; }
 @media (max-width: 640px) { .link-row { grid-template-columns: 1fr 1fr; } }
+
+@media (max-width: 600px) {
+  .panel { padding: 16px; }
+  .toolbar .btn { flex: 1 1 auto; }
+}
