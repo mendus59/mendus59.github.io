@@ -224,6 +224,7 @@ function openEditor(index) {
   f.iconFile.value = "";
   f.hidden.checked = !!p.hidden;
   f.private.checked = !!p.private;
+  f.summarySync.checked = p.summarySync !== false;
   state.draftLinks = structuredClone(p.links ?? []);
   $("edit-error").textContent = "";
   renderLinks();
@@ -286,10 +287,11 @@ function readForm() {
   };
   if (f.private.checked) p.private = true;
   if (f.hidden.checked) p.hidden = true;
+  if (!f.summarySync.checked) p.summarySync = false;
   // Keep any fields this form doesn't know about.
   const orig = state.editing >= 0 ? state.projects[state.editing] : {};
   const extra = Object.fromEntries(
-    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "private", "hidden"].includes(k)),
+    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "private", "hidden", "summarySync"].includes(k)),
   );
   return { ...p, ...extra };
 }
@@ -306,9 +308,33 @@ function validate(p) {
   return null;
 }
 
+// Same rule as scripts/sync-summaries.mjs: a GitHub source link (or "readme": "owner/repo").
+function readmeRepo(p) {
+  if (typeof p.readme === "string" && /^[\w.-]+\/[\w.-]+$/.test(p.readme)) return p.readme;
+  for (const l of p.links ?? []) {
+    const m = String(l.url ?? "").match(/^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?\/?$/);
+    if (m) return `${m[1]}/${m[2]}`;
+  }
+  return null;
+}
+
+// While the summary syncs from a README, edits here would be overwritten the next day, so lock them.
+function renderSyncNote() {
+  const f = form();
+  const p = readForm();
+  const repo = readmeRepo(p);
+  const syncing = !!repo && f.summarySync.checked;
+  f.summarySync.disabled = !repo;
+  $("sync-note").hidden = !syncing;
+  $("sync-repo").textContent = repo ?? "";
+  f.tagline.readOnly = syncing;
+  f.description.readOnly = syncing;
+}
+
 function renderPreview() {
   const p = readForm();
   $("preview").replaceChildren(projectCard({ ...p, name: p.name || "Project name" }, { iconSrc: iconSrc(p) }));
+  renderSyncNote();
 }
 
 function saveEditor(e) {

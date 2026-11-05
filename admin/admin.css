@@ -99,3 +99,6 @@ button.btn:disabled { opacity: 0.45; cursor: default; }
   .panel { padding: 16px; }
   .toolbar .btn { flex: 1 1 auto; }
 }
+
+.note { margin: -6px 0 0; font-size: 0.9rem; }
+input[readonly], textarea[readonly] { opacity: 0.7; cursor: not-allowed; }

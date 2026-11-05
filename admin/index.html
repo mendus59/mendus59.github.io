@@ -68,6 +68,10 @@
           <label>Name <input name="name" required></label>
           <label>Slug <small class="muted">short id, letters/numbers/-/_</small>
             <input name="slug" required pattern="[A-Za-z0-9_-]+"></label>
+          <label class="check"><input name="summarySync" type="checkbox"> Keep the summary in sync with the project's README</label>
+          <p id="sync-note" class="muted note" hidden>The summary and description come from the
+            <code>site-summary</code> section of <span id="sync-repo"></span>'s README and are refreshed daily.
+            Edit the README to change them, or untick the box to write your own here.</p>
           <label>Summary <small class="muted">one line under the title</small><input name="tagline"></label>
           <label>Short description <small class="muted">one bullet per line</small>
             <textarea name="description" rows="5"></textarea></label>

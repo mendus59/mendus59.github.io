@@ -1,0 +1,48 @@
+# Once a day, copies each project's README summary section into data/projects.json
+# (see "Project summaries" in README.md), commits any change to main, and redeploys the site.
+name: Sync project summaries
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # daily, 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit data/projects.json
+  actions: write # start the Pages deploy (pushes made with GITHUB_TOKEN don't trigger it)
+
+concurrency:
+  group: sync-summaries
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pull summaries from the READMEs
+        run: node scripts/sync-summaries.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit and redeploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/projects.json; then
+            echo "Summaries already match the READMEs."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync project summaries from READMEs" -- data/projects.json
+          # If the admin panel published while this ran, replay on top of it rather than overwrite it.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep 5
+          done
+          gh workflow run pages.yml --ref main
