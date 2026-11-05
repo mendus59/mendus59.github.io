@@ -117,6 +117,10 @@
         "url": "https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk"
       },
       {
+        "label": "About & install",
+        "url": "apps/tide-widget/"
+      },
+      {
         "label": "Source",
         "url": "https://github.com/mendus59/TideWidget"
       }

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tide Widget · Pat Mendus</title>
+  <meta name="description" content="A weather-map-style tide map and a home-screen widget showing the next high and low tide for your beach.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../app-page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../../">← All projects</a>
+
+    <header class="hero">
+      <img src="icon.svg" alt="" width="88" height="88">
+      <div>
+        <h1>Tide Widget</h1>
+        <p>A tide map that moves like a radar loop, and a home-screen widget for your beach.</p>
+      </div>
+    </header>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://mendus59.github.io/TideWidget/">Open the web version</a>
+      <a class="btn" href="https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk">Download for Android (.apk)</a>
+      <a class="btn" href="https://github.com/mendus59/TideWidget">Source on GitHub</a>
+    </div>
+    <p class="muted">Free. Use the map in your browser, or install the Android app for the home-screen widget. Covers about 3,000 NOAA tide stations in the US.</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Tide map:</strong> NOAA tide stations drawn as dots, blue at low tide through yellow to red at high tide. Drag the slider across the next 24 hours and watch the tide move along the coast.</li>
+      <li><strong>Search and location:</strong> the map opens on you, and you can type a beach, town or address to get the closest stations.</li>
+      <li><strong>Week view:</strong> tap a station for a 24-hour or 7-day tide chart and every high and low for the week.</li>
+      <li><strong>Areas:</strong> stations that rise and fall together are grouped, with a window for the next high and low across the group.</li>
+      <li><strong>Widget (Android):</strong> your beach's name, next high and next low, plus a tide curve on larger sizes. It works from a cached three-day forecast, so it stays correct offline.</li>
+    </ul>
+    <p class="muted">The web version has everything except the widget; it pins a "My beach" card instead.</p>
+
+    <h2 id="install">Install on Android</h2>
+    <div class="panel">
+      <ol>
+        <li>On your phone, tap <a href="https://github.com/mendus59/TideWidget/releases/download/latest/Tides.apk">Download for Android</a>. Android 8.0 or newer.</li>
+        <li>Open the downloaded <code>Tides.apk</code>. If Android asks, allow your browser to install unknown apps, then tap <strong>Install</strong>.</li>
+        <li>Open Tides, tap a station, and tap <strong>Use for my widget</strong>.</li>
+        <li>Long-press your home screen, choose <strong>Widgets</strong>, and add <strong>Tides</strong>. It fits sizes from 1×1 to 2×3.</li>
+      </ol>
+    </div>
+    <p class="muted">This is a test build that isn't on the Play Store. Times show in your phone's time zone, not the station's. <a href="https://github.com/mendus59/TideWidget/releases/tag/latest">Release notes</a></p>
+
+    <h2>Where the data comes from</h2>
+    <p>Tide predictions come from <a href="https://tidesandcurrents.noaa.gov/">NOAA CO-OPS</a>, free and with no account. Map tiles in the web version come from OpenStreetMap.</p>
+
+    <h2>Built with</h2>
+    <ul class="chips">
+      <li>Kotlin</li><li>Jetpack Compose</li><li>Glance widgets</li><li>WorkManager</li><li>Google Maps SDK</li><li>Leaflet</li><li>NOAA CO-OPS API</li><li>GitHub Actions</li>
+    </ul>
+  </main>
+
+  <footer class="wrap muted">Made by <a href="../../">Pat Mendus</a></footer>
+</body>
+</html>
