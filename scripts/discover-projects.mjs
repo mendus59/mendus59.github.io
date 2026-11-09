@@ -19,7 +19,7 @@
 
 import { readFile, writeFile, appendFile, access } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
-import { parseSummary } from "./sync-summaries.mjs";
+import { parseSummary, plain } from "./sync-summaries.mjs";
 
 const ROOT = new URL("../", import.meta.url);
 const DATA_PATH = new URL("data/projects.json", ROOT);
@@ -94,22 +94,42 @@ export function listedRepos(projects, owner = OWNER) {
 
 const slugify = (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "project";
 
-/** "costal_forager" → "Costal Forager", "TideWidget" → "Tide Widget". */
+/** "costal_forager" → "Costal Forager", "TideWidget" → "Tide Widget", "cs513_x" → "CS513 X". */
 export function humanize(name) {
   return name
     .replace(/[_-]+/g, " ")
     .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
     .replace(/\s+/g, " ")
     .trim()
-    .replace(/\b[a-z]/g, (c) => c.toUpperCase());
+    .replace(/\b[a-z]/g, (c) => c.toUpperCase())
+    .replace(/\b([A-Z][a-z]{0,3})(\d+)\b/g, (_, a, d) => a.toUpperCase() + d);
 }
 
+const stripEmoji = (s) => s.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, "").replace(/\s+/g, " ").trim();
+
 /** The README's first "# Heading", if it reads like a product name. */
-function readmeTitle(md) {
+export function readmeTitle(md) {
   const m = md?.match(/^#\s+(.+?)\s*#*\s*$/m);
   if (!m) return null;
-  const t = m[1].replace(/!\[[^\]]*\]\([^)]*\)/g, "").replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/[`*_]/g, "").trim();
-  return t && t.length <= 40 ? t : null;
+  const t = stripEmoji(plain(m[1]));
+  if (!t || t.length > 40 || /\b(readme|read me)\b/i.test(t)) return null;
+  return t;
+}
+
+/** The README's first prose paragraph as a one-line summary (≤160 chars), or "". */
+export function readmeIntro(md) {
+  if (!md) return "";
+  const paras = md.replace(/\r\n?/g, "\n").replace(/<!--[\s\S]*?-->/g, "").replace(/```[\s\S]*?```/g, "").split(/\n\s*\n/);
+  for (const para of paras) {
+    const t = para.trim();
+    if (!t || /^(#|[-*+]\s|\d+\.\s|\||>|<|!\[|\[!\[)/.test(t)) continue;
+    const text = stripEmoji(plain(t));
+    if (text.length < 20) continue;
+    if (text.length <= 160) return text;
+    const sentence = text.match(/^.{20,159}?[.!?](?=\s|$)/);
+    return sentence ? sentence[0] : text.slice(0, 157).replace(/\s+\S*$/, "") + "…";
+  }
+  return "";
 }
 
 // A rounded-square monogram, coloured from the repo name so it stays the same between runs.
@@ -140,16 +160,15 @@ async function buildCard(repo, taken) {
 
   let tagline = (repo.description ?? "").trim();
   let description = [];
-  let summaryNote = "no site-summary section in the README, used the repo description";
-  if (readme) {
-    try {
-      ({ tagline, description } = parseSummary(readme));
-      summaryNote = "summary from the README";
-    } catch (err) {
-      summaryNote = `README summary not used (${err.message}), used the repo description`;
-    }
-  } else summaryNote = "no README, used the repo description";
-  if (!tagline) tagline = `${name}, a project by ${OWNER}.`;
+  let summaryNote;
+  try {
+    if (!readme) throw new Error("no README");
+    ({ tagline, description } = parseSummary(readme));
+    summaryNote = "summary from the README's site-summary section";
+  } catch (err) {
+    if (!tagline) tagline = readmeIntro(readme);
+    summaryNote = `${err.message}; summary from the ${tagline ? (repo.description ? "repo description" : "README's first paragraph") : "(nothing found, left blank)"}`;
+  }
 
   const total = Object.values(languages ?? {}).reduce((a, b) => a + b, 0) || 1;
   const langs = Object.entries(languages ?? {})
