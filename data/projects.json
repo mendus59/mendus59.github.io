@@ -392,5 +392,228 @@
         "url": "https://github.com/mendus59/fedreg"
       }
     ]
+  },
+  {
+    "slug": "cs513-bing-tile-stitching",
+    "name": "CS513 Bing Tile Stitching",
+    "tagline": "This script requires use of OpenCV",
+    "description": [],
+    "icon": "assets/icons/cs513-bing-tile-stitching.svg",
+    "skills": [
+      "Python"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/cs513_bing_tile_stitching",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "cs513-point-cloud-perspective-matching",
+    "name": "CS513 Point Cloud Perspective Matching",
+    "tagline": "",
+    "description": [],
+    "icon": "assets/icons/cs513-point-cloud-perspective-matching.svg",
+    "skills": [
+      "Python"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/cs513_point_cloud_perspective_matching",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "cs559-iris-recognition",
+    "name": "CS559 Iris Recognition",
+    "tagline": "",
+    "description": [],
+    "icon": "assets/icons/cs559-iris-recognition.svg",
+    "skills": [
+      "Python"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/cs559_iris_recognition",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "cs586-software-design-implementation",
+    "name": "CS586 Software Design Implementation",
+    "tagline": "",
+    "description": [],
+    "icon": "assets/icons/cs586-software-design-implementation.svg",
+    "skills": [
+      "Java"
+    ],
+    "stack": [
+      "CSS",
+      "Java",
+      "HTML"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/cs586_software_design_implementation",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "foraging-blog",
+    "name": "Foraging Blog",
+    "tagline": "Boilerplate blog created from https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify",
+    "description": [],
+    "icon": "assets/icons/foraging-blog.svg",
+    "skills": [
+      "JavaScript"
+    ],
+    "stack": [
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/foraging_blog",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "interview-practice",
+    "name": "Interview_Practice",
+    "tagline": "",
+    "description": [],
+    "icon": "assets/icons/interview-practice.svg",
+    "skills": [
+      "Python"
+    ],
+    "stack": [
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/Interview_Practice",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "jsch6ass",
+    "name": "Jsch6ass",
+    "tagline": "Javascript Chapter 6 Chapter Assignment",
+    "description": [],
+    "icon": "assets/icons/jsch6ass.svg",
+    "skills": [],
+    "stack": [],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/jsch6ass",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "learning-jamstack",
+    "name": "Learning the JAMStack",
+    "tagline": "This project was created while following the JAMStack Tutorial https://www.youtube.com/watch?v=A_l0qrPUJds",
+    "description": [],
+    "icon": "assets/icons/learning-jamstack.svg",
+    "skills": [
+      "JavaScript"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML"
+    ],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/learning-jamstack",
+        "primary": true
+      }
+    ],
+    "hidden": true
+  },
+  {
+    "slug": "vectorious",
+    "name": "Vectorious",
+    "tagline": "Convert raster images (PNG, JPG, WebP, GIF, BMP) into detailed SVG vector graphics, entirely in the browser.",
+    "description": [],
+    "icon": "assets/icons/vectorious.svg",
+    "skills": [
+      "JavaScript",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "links": [
+      {
+        "label": "Open Vectorious",
+        "url": "https://mendus59.github.io/vectorious/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/vectorious"
+      }
+    ]
+  },
+  {
+    "slug": "webwander",
+    "name": "WebWander",
+    "tagline": "Wander the fun, weird and creative corners of the web, one click at a time.",
+    "description": [],
+    "icon": "assets/icons/webwander.svg",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "links": [
+      {
+        "label": "Open WebWander",
+        "url": "https://mendus59.github.io/webwander/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/webwander"
+      }
+    ]
   }
 ]
