@@ -30,7 +30,7 @@ const MAX_TAGLINE = 160;
 const MAX_BULLETS = 6;
 
 // Markdown → the plain text the cards show (they escape HTML and render no markdown).
-function plain(s) {
+export function plain(s) {
   return s
     .replace(/!\[[^\]]*\]\([^)]*\)/g, "") // images
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") // [text](url)
