@@ -12,7 +12,7 @@ permissions:
   actions: write # start the Pages deploy (pushes made with GITHUB_TOKEN don't trigger it)
 
 concurrency:
-  group: sync-summaries
+  group: projects-json # shared with discover-projects.yml; both write data/projects.json
   cancel-in-progress: false
 
 jobs:
