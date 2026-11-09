@@ -48,6 +48,25 @@ panel or here). To check a README locally: `node scripts/sync-summaries.mjs --ch
 Each project repo has a `Site summary` workflow that checks the section on every pull request, and a
 `CLAUDE.md` note asking for the section to be updated whenever user-facing features change.
 
+## New projects
+
+Once a day (and on demand from the Actions tab, with an optional dry run),
+[`discover-projects.yml`](.github/workflows/discover-projects.yml) runs
+[`scripts/discover-projects.mjs`](scripts/discover-projects.mjs), which lists the owner's public repos and adds
+a card for each one that no card links to yet, then commits to `main` and redeploys the site. Forks, archived
+repos, this site's repo and anything named in [`data/discover-ignore.json`](data/discover-ignore.json) (a list
+of repo names) are skipped.
+
+- A repo with a GitHub Pages site or a homepage gets a visible card whose main button opens it, plus a Source link.
+- A repo with neither is added with `hidden: true`, so it can be checked, given a Pages or install page, and shown
+  from the admin panel.
+- The summary comes from the README's site-summary section (then the daily summary sync keeps it current), or the
+  repo's GitHub description if there is none. Skills and stack come from the repo's languages and topics, and the
+  card gets a generated monogram icon in `assets/icons/<slug>.svg` to swap for a real one.
+
+To drop a discovered card for good, hide it, or remove it and add the repo's name to `data/discover-ignore.json`,
+since a removed card comes back on the next run.
+
 ## Admin panel
 
 [`/admin/`](https://mendus59.github.io/admin/) edits `data/projects.json` in the browser:
