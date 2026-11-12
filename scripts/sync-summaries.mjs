@@ -77,6 +77,11 @@ export function parseSummary(markdown) {
 /** "owner/repo" this project's summary comes from, or null. */
 export function sourceRepo(project) {
   if (project.summarySync === false) return null;
+  return cardRepo(project);
+}
+
+/** "owner/repo" a card belongs to (its "readme" field, else its GitHub source link), or null. */
+export function cardRepo(project) {
   if (typeof project.readme === "string" && /^[\w.-]+\/[\w.-]+$/.test(project.readme)) return project.readme;
   for (const link of project.links ?? []) {
     const m = String(link.url ?? "").match(/^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?\/?$/);

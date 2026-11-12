@@ -70,7 +70,7 @@
             <input name="slug" required pattern="[A-Za-z0-9_-]+"></label>
           <label class="check"><input name="summarySync" type="checkbox"> Keep the summary in sync with the project's README</label>
           <p id="sync-note" class="muted note" hidden>The summary and description come from the
-            <code>site-summary</code> section of <span id="sync-repo"></span>'s README and are refreshed daily.
+            <code>site-summary</code> section of <span id="sync-repo"></span>'s README and are refreshed every few hours.
             Edit the README to change them, or untick the box to write your own here.</p>
           <label>Summary <small class="muted">one line under the title</small><input name="tagline"></label>
           <label>Short description <small class="muted">one bullet per line</small>
@@ -81,11 +81,17 @@
             <legend>Icon</legend>
             <label>Path or URL <input name="icon" placeholder="assets/icons/my-project.svg"></label>
             <label>…or upload a square image <input name="iconFile" type="file" accept="image/png,image/svg+xml,image/jpeg,image/webp"></label>
+            <label class="check"><input name="iconSync" type="checkbox"> Keep the icon in sync with the app's own icon</label>
+            <p class="muted note">Refreshed every few hours from the README's <code>site-icon</code>, the extension manifest or the live
+              app. Uploading an icon here turns this off.</p>
           </fieldset>
           <fieldset>
             <legend>Links</legend>
             <div id="links"></div>
             <button id="add-link" class="btn" type="button">Add link</button>
+            <label class="check"><input name="linkSync" type="checkbox"> Add links automatically</label>
+            <p class="muted note">Adds the live site, new release downloads and store pages from the README, and repoints
+              downloads whose file has moved. It never removes a link.</p>
           </fieldset>
           <label class="check"><input name="hidden" type="checkbox"> Hidden from the public page</label>
           <label class="check"><input name="private" type="checkbox"> Show a "Private" badge (don't add a source link)</label>

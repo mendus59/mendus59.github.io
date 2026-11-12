@@ -191,7 +191,7 @@ async function buildCard(repo, taken) {
 
   const iconPath = `assets/icons/${slug}.svg`;
   const card = { slug, name, tagline, description, icon: iconPath, skills, stack, links };
-  if (!live) card.hidden = true;
+  if (!live) Object.assign(card, { hidden: true, autoHidden: true }); // shown by sync-cards.mjs once it has a live site
   return { card, icon: monogramSvg(name), iconPath, summaryNote };
 }
 

@@ -4,7 +4,7 @@ name: Discover new projects
 
 on:
   schedule:
-    - cron: "47 8 * * *" # daily, 08:47 UTC (half an hour before the summary sync)
+    - cron: "47 8 * * *" # daily, 08:47 UTC (half an hour before a card sync)
   workflow_dispatch:
     inputs:
       dry_run:
