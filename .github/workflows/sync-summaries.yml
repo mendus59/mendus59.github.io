@@ -1,14 +1,15 @@
-# Once a day, copies each project's README summary section into data/projects.json
-# (see "Project summaries" in README.md), commits any change to main, and redeploys the site.
-name: Sync project summaries
+# Every six hours, refreshes each project card from its repo (see "Keeping cards current" in README.md):
+# the summary from the README's site-summary section, plus the icon, live link, downloads and store
+# pages. Commits any change to main and redeploys the site.
+name: Sync project cards
 
 on:
   schedule:
-    - cron: "17 9 * * *" # daily, 09:17 UTC
+    - cron: "17 3,9,15,21 * * *" # every six hours, starting 03:17 UTC
   workflow_dispatch:
 
 permissions:
-  contents: write # commit data/projects.json
+  contents: write # commit data/projects.json, icons and the apps/ pages
   actions: write # start the Pages deploy (pushes made with GITHUB_TOKEN don't trigger it)
 
 concurrency:
@@ -29,17 +30,22 @@ jobs:
         run: node scripts/sync-summaries.mjs
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - name: Pull icons, live links and downloads
+        run: node scripts/sync-cards.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Commit and redeploy
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- data/projects.json; then
-            echo "Summaries already match the READMEs."
+          git add data/projects.json assets/icons apps
+          if git diff --cached --quiet; then
+            echo "Cards already match their projects."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Sync project summaries from READMEs" -- data/projects.json
+          git commit -m "Sync project cards from their repos"
           # If the admin panel published while this ran, replay on top of it rather than overwrite it.
           for attempt in 1 2 3; do
             git pull --rebase origin main && git push origin HEAD:main && break

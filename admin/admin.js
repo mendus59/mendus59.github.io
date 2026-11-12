@@ -194,7 +194,12 @@ function renderList() {
 
 function rowAction(act, i) {
   const p = state.projects;
-  if (act === "toggle") p[i].hidden ? delete p[i].hidden : (p[i].hidden = true);
+  // Hiding or showing by hand is a decision the sync shouldn't undo, so drop the "hidden until it has a live site" flag.
+  if (act === "toggle") {
+    if (p[i].hidden) delete p[i].hidden;
+    else p[i].hidden = true;
+    delete p[i].autoHidden;
+  }
   if (act === "up" && i > 0) [p[i - 1], p[i]] = [p[i], p[i - 1]];
   if (act === "down" && i < p.length - 1) [p[i + 1], p[i]] = [p[i], p[i + 1]];
   if (act === "remove" && confirm(`Remove "${p[i].name}"? Hide it instead if you might want it back.`)) p.splice(i, 1);
@@ -225,6 +230,8 @@ function openEditor(index) {
   f.hidden.checked = !!p.hidden;
   f.private.checked = !!p.private;
   f.summarySync.checked = p.summarySync !== false;
+  f.iconSync.checked = p.iconSync !== false;
+  f.linkSync.checked = p.linkSync !== false;
   state.draftLinks = structuredClone(p.links ?? []);
   $("edit-error").textContent = "";
   renderLinks();
@@ -288,11 +295,14 @@ function readForm() {
   if (f.private.checked) p.private = true;
   if (f.hidden.checked) p.hidden = true;
   if (!f.summarySync.checked) p.summarySync = false;
+  if (!f.iconSync.checked) p.iconSync = false;
+  if (!f.linkSync.checked) p.linkSync = false;
   // Keep any fields this form doesn't know about.
   const orig = state.editing >= 0 ? state.projects[state.editing] : {};
   const extra = Object.fromEntries(
-    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "private", "hidden", "summarySync"].includes(k)),
+    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "private", "hidden", "summarySync", "iconSync", "linkSync", "autoHidden"].includes(k)),
   );
+  if (orig.autoHidden && p.hidden) p.autoHidden = true;
   return { ...p, ...extra };
 }
 
@@ -378,6 +388,7 @@ async function onIconFile() {
   if (old) URL.revokeObjectURL(old.objectUrl);
   state.icons.set(path, { base64: dataUrl.split(",")[1], objectUrl: URL.createObjectURL(file) });
   f.icon.value = path;
+  f.iconSync.checked = false; // a hand-picked icon shouldn't be replaced by the next sync
   $("edit-error").textContent = "";
   renderPreview();
 }

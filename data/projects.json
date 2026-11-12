@@ -412,7 +412,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "cs513-point-cloud-perspective-matching",
@@ -433,7 +434,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "cs559-iris-recognition",
@@ -454,7 +456,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "cs586-software-design-implementation",
@@ -477,7 +480,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "foraging-blog",
@@ -498,7 +502,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "interview-practice",
@@ -519,7 +524,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "jsch6ass",
@@ -536,7 +542,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "learning-jamstack",
@@ -558,7 +565,8 @@
         "primary": true
       }
     ],
-    "hidden": true
+    "hidden": true,
+    "autoHidden": true
   },
   {
     "slug": "vectorious",
