@@ -1,5 +1,39 @@
 [
   {
+    "slug": "metabolismmath",
+    "name": "MetabolismMath",
+    "tagline": "Estimate how a vitamin or supplement is metabolized from its chemical structure, right in the browser.",
+    "description": [
+      "A library of 24 vitamins, minerals and supplements, each with its documented absorption, transport, transformation, storage and excretion pathway.",
+      "Paste a SMILES structure and RDKit calculates the formula, logP, polar surface area and Lipinski/Veber screen, and draws the 2D structure.",
+      "A rule-based prediction of how a dose splits between energy, cofactor use, storage, gut fermentation and excretion.",
+      "Checks your dose against US adult RDA/AI and upper limits, and estimates the usable energy."
+    ],
+    "icon": "assets/icons/metabolismmath.svg",
+    "skills": [
+      "JavaScript",
+      "Cheminformatics",
+      "Nutrition science"
+    ],
+    "stack": [
+      "JavaScript",
+      "RDKit.js",
+      "WebAssembly",
+      "HTML/CSS"
+    ],
+    "links": [
+      {
+        "label": "Open MetabolismMath",
+        "url": "https://mendus59.github.io/MetabolismMath/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/MetabolismMath"
+      }
+    ]
+  },
+  {
     "slug": "sortsight",
     "name": "SortSight",
     "tagline": "Watch sorting algorithms run line by line, edit their code live, and compare them on the same data.",
