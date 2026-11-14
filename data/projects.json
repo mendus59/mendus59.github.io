@@ -112,7 +112,8 @@
     "description": [
       "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
       "Finds the next day the tide is low enough during the hours you want to be out, and rates each day.",
-      "Push alerts for good days at your favorite beaches, plus a home-screen widget."
+      "Shows the water height hour by hour for any beach or NOAA tide station.",
+      "Push alerts for good days at your favorite beaches, plus a home-screen widget with the tide height now."
     ],
     "icon": "assets/icons/coastal-forager.png",
     "skills": [
@@ -607,7 +608,12 @@
     "slug": "vectorious",
     "name": "Vectorious",
     "tagline": "Convert raster images (PNG, JPG, WebP, GIF, BMP) into detailed SVG vector graphics, entirely in the browser.",
-    "description": [],
+    "description": [
+      "Traces each color layer with a built-in Potrace implementation into smooth Bezier curves, with no AI and nothing uploaded.",
+      "Presets for photos, logos, line art and pixel art, with up to 128 colors and optional pixel-exact edges.",
+      "Splits the result into layers by color, shape, size or similar objects, and downloads any layer as an SVG.",
+      "Compare, outline and zoom views check the vector against the original."
+    ],
     "icon": "assets/icons/vectorious.svg",
     "skills": [
       "JavaScript",
@@ -634,7 +640,12 @@
     "slug": "webwander",
     "name": "WebWander",
     "tagline": "Wander the fun, weird and creative corners of the web, one click at a time.",
-    "description": [],
+    "description": [
+      "A daily crawler finds creative, obscure and weird sites from Hacker News, Marginalia, Lobsters and more, and scores them with plain heuristics, not AI.",
+      "Sign in with Google to remember what you've seen, like or dislike sites to steer what comes next, and save favorites as a list or picture cards.",
+      "Suggest a site for review; an admin panel approves finds from a category-balanced queue.",
+      "Only secure https sites are shown, and mature sites stay hidden unless you opt in."
+    ],
     "icon": "assets/icons/webwander.svg",
     "skills": [
       "Python",
