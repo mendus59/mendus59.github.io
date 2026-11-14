@@ -1,5 +1,40 @@
 [
   {
+    "slug": "sortsight",
+    "name": "SortSight",
+    "tagline": "Watch sorting algorithms run line by line, edit their code live, and compare them on the same data.",
+    "description": [
+      "Eight built-in sorts (Bubble, Selection, Insertion, Cocktail Shaker, Shell, Merge, Quick, Heap) with the running line of code highlighted beside a live bar chart.",
+      "Edit any algorithm or write your own sort() and watch your version run, safely sandboxed in a Web Worker.",
+      "Worst-case data sets for every algorithm, plus your own values, replayed in the same order so the comparison table is a fair head-to-head.",
+      "Scales to 10,000 bars, from 1 step per second up to millions."
+    ],
+    "icon": "assets/icons/sortsight.svg",
+    "skills": [
+      "JavaScript",
+      "Algorithms",
+      "Data visualization"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML canvas",
+      "Web Workers",
+      "Acorn",
+      "CodeMirror"
+    ],
+    "links": [
+      {
+        "label": "Open SortSight",
+        "url": "https://mendus59.github.io/SortSight/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/SortSight"
+      }
+    ]
+  },
+  {
     "slug": "voidlight",
     "name": "Voidlight",
     "tagline": "An original survivor-style bullet hell for the browser.",
