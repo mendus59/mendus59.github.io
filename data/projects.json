@@ -1,5 +1,43 @@
 [
   {
+    "slug": "whaletracker",
+    "name": "WhaleTracker",
+    "tagline": "Live map of whale and orca sightings around Puget Sound, from public sighting reports, iNaturalist and scientific datasets.",
+    "description": [
+      "See sightings from Orca Network, Whale Alert and partners (via Acartia), iNaturalist and OBIS on one map.",
+      "Filter by time range, species, orca ecotype, pod or individual (J pod, J35, T65A and more), and source.",
+      "Scrub or play a timeline, in cumulative or moving-window mode.",
+      "See linked tracks and a simple 3-hour movement prediction for groups on the move.",
+      "Click a sighting or moving group to zoom to it and highlight it.",
+      "Sign in with Google or email to follow whales and keep your filters."
+    ],
+    "icon": "assets/icons/whaletracker.svg",
+    "skills": [
+      "TypeScript",
+      "Mapping",
+      "Data pipelines"
+    ],
+    "stack": [
+      "TypeScript",
+      "React",
+      "Leaflet",
+      "Firebase",
+      "GitHub Actions",
+      "Vite"
+    ],
+    "links": [
+      {
+        "label": "Open WhaleTracker",
+        "url": "https://mendus59.github.io/WhaleTracker/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/WhaleTracker"
+      }
+    ]
+  },
+  {
     "slug": "luthierspen",
     "name": "LuthiersPen",
     "tagline": "Turn a solo guitar recording into classical guitar sheet music you can play back, check against the original and edit, all in the browser.",
