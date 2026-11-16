@@ -1,5 +1,41 @@
 [
   {
+    "slug": "rentalrater",
+    "name": "RentalRater",
+    "tagline": "Rate Washington and Oregon property listings as short-term rental investments, with a Buy, Close or Don't buy verdict for each.",
+    "description": [
+      "Browse active for-sale listings in coastal, river and STR-hotspot areas of WA and OR, refreshed monthly from RentCast, each with a verdict and the highest offer that still gets a Buy.",
+      "Compare plans per property: rent it as-is, refurbish, add tiny homes, or build a cabin on land.",
+      "Model financing (DSCR, conventional, land, construction, HELOC, seller financing or cash), startup costs and self-managed or Vacasa management.",
+      "Set your goal: earn back your cash within a set number of years, or just break even on the mortgage while you use the place.",
+      "Rate any Zillow, Redfin or Realtor.com listing with a bookmarklet that fills in the Evaluate form.",
+      "Sign in with Google to save settings and properties, or use it without an account in local mode."
+    ],
+    "icon": "assets/icons/rentalrater.svg",
+    "skills": [
+      "JavaScript",
+      "Financial modeling",
+      "Data pipelines"
+    ],
+    "stack": [
+      "JavaScript",
+      "Firebase",
+      "RentCast API",
+      "GitHub Actions"
+    ],
+    "links": [
+      {
+        "label": "Open RentalRater",
+        "url": "https://mendus59.github.io/RentalRater/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/RentalRater"
+      }
+    ]
+  },
+  {
     "slug": "whaletracker",
     "name": "WhaleTracker",
     "tagline": "Live map of whale and orca sightings around Puget Sound, from public sighting reports, iNaturalist and scientific datasets.",
