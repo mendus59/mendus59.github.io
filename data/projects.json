@@ -259,7 +259,7 @@
       "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
       "Finds the next day the tide is low enough during the hours you want to be out, and rates each day.",
       "Shows the water height hour by hour for any beach or NOAA tide station.",
-      "Push alerts for good days at your favorite beaches, plus a home-screen widget with the tide height now."
+      "Push alerts for good days at your favorite beaches, plus a home-screen widget with the tide height now and tap-to-refresh."
     ],
     "icon": "assets/icons/coastal-forager.png",
     "skills": [
