@@ -840,6 +840,10 @@
         "primary": true
       },
       {
+        "label": "Download for Windows",
+        "url": "https://github.com/mendus59/yt-dlp-GUI/releases/download/v1.0.0/YT-Downloader.exe"
+      },
+      {
         "label": "Source",
         "url": "https://github.com/mendus59/yt-dlp-GUI"
       }
