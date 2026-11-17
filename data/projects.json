@@ -818,5 +818,31 @@
         "url": "https://github.com/mendus59/webwander"
       }
     ]
+  },
+  {
+    "slug": "yt-dlp-gui",
+    "name": "YT Downloader (yt-dlp GUI)",
+    "tagline": "A free Windows desktop app that puts a simple window on top of yt-dlp, plus a GitHub Pages web app that opens the desktop app with your settings filled in.",
+    "description": [],
+    "icon": "assets/icons/yt-dlp-gui.svg",
+    "skills": [
+      "Python",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "PowerShell"
+    ],
+    "links": [
+      {
+        "label": "Open YT Downloader (yt-dlp GUI)",
+        "url": "https://mendus59.github.io/yt-dlp-GUI/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/yt-dlp-GUI"
+      }
+    ]
   }
 ]
