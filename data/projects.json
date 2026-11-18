@@ -756,12 +756,14 @@
   {
     "slug": "vectorious",
     "name": "Vectorious",
-    "tagline": "Convert raster images (PNG, JPG, WebP, GIF, BMP) into detailed SVG vector graphics, entirely in the browser.",
+    "tagline": "Convert raster images (PNG, JPG, WebP, GIF, BMP) or typed text into detailed SVG vector graphics, entirely in the browser.",
     "description": [
       "Traces each color layer with a built-in Potrace implementation into smooth Bezier curves, with no AI and nothing uploaded.",
-      "Presets for photos, logos, line art and pixel art, with up to 128 colors and optional pixel-exact edges.",
-      "Splits the result into layers by color, shape, size or similar objects, and downloads any layer as an SVG.",
-      "Compare, outline and zoom views check the vector against the original."
+      "Presets for photos, logos, small text and icons, line art and pixel art, with up to 128 colors.",
+      "Traces tiny, low-resolution text cleanly by upscaling it, dropping anti-aliasing blends and refining edges against the original pixels.",
+      "Turns typed text into vector outlines in 26 bundled fonts or your own, and finds the closest font to an image of text.",
+      "Builds a new font (.otf) from the lettering in an image, so custom lettering can be typed in its own style.",
+      "Splits the result into layers by color, shape, size or similar objects, and downloads any layer as an SVG."
     ],
     "icon": "assets/icons/vectorious.svg",
     "skills": [
