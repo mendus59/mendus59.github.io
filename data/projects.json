@@ -81,7 +81,7 @@
       "Transcribe an audio or MP4 video file (all of it or a chosen part), a YouTube video played in the page, or your microphone into classical guitar notation.",
       "Scores are engraved like a published edition: the key found by ear and its signature, notation over tablature, two voices, fingerings, string numbers, barres and chord names.",
       "Play the score with a moving cursor, tempo control, looping, metronome and count-in, or hear the original recording in step with it.",
-      "Check the transcription: every written note is looked up in the recording, and doubtful notes and measures are marked in the score.",
+      "Check every written note against the recording, and compare the arrangement with the composer's original score to find missing melody notes and stray ones.",
       "Edit any note, rhythm or fingering, or write a new score from scratch, with undo and keyboard shortcuts.",
       "Sign in with Google or email to save scores to your library, and export to PDF, MIDI or Guitar Pro."
     ],
