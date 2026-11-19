@@ -4,14 +4,14 @@
     "name": "ManaBin",
     "tagline": "A free web app for tracking a Magic: The Gathering collection, with every card and printing and Scryfall-style search.",
     "description": [
-      "Search the full paper card library, with every printing and art variant and its price.",
-      "Add the exact printing, finish, condition and language you own, or import a ManaBox CSV export.",
-      "Your collection syncs across devices when you sign in with Google, and works offline.",
-      "New sets are added automatically on release day by a daily GitHub Actions job.",
-      "Export your collection as a ManaBox-compatible CSV or a JSON backup at any time.",
-      "Browse a shared collection, with prices from TCGplayer, Card Kingdom and MTGGoldfish."
+      "Open to a dashboard of your collection's value, its price change over the week, recent additions, decks and binders.",
+      "Browse the full paper card library, with every printing and art variant, updated on each set's release day.",
+      "Install it on a phone and scan cards with the camera, then fix printing, finish or condition and save them to a binder.",
+      "Add the exact printing, finish, condition and language you own, sort cards into binders, and import or export ManaBox CSVs.",
+      "Build decks for any format or paste one in, with a Commander builder that suggests cards from EDHREC and your own collection.",
+      "Sign in with Google to sync across devices, compare prices from three stores, keep a wishlist and share with friends."
     ],
-    "icon": "assets/icons/manabin.svg",
+    "icon": "assets/icons/manabin.png",
     "skills": [
       "TypeScript",
       "Data pipelines",
@@ -119,7 +119,7 @@
       "Scores are engraved like a published edition: the key found by ear and its signature, notation over tablature, two voices, fingerings, string numbers, barres and chord names.",
       "Play the score with a moving cursor, tempo control, looping, metronome and count-in, or hear the original recording in step with it.",
       "Check every written note against the recording, and compare the arrangement with the composer's original score to find missing melody notes and stray ones.",
-      "Edit any note, rhythm or fingering, or write a new score from scratch, with undo and keyboard shortcuts.",
+      "Edit any note, rhythm or fingering, write a new score from scratch, or import a MusicXML or Guitar Pro file as an editable score.",
       "Sign in with Google or email to save scores to your library, and export to PDF, MIDI or Guitar Pro."
     ],
     "icon": "assets/icons/luthierspen.svg",
