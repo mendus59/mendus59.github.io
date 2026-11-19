@@ -1,5 +1,42 @@
 [
   {
+    "slug": "manabin",
+    "name": "ManaBin",
+    "tagline": "A free web app for tracking a Magic: The Gathering collection, with every card and printing and Scryfall-style search.",
+    "description": [
+      "Search the full paper card library, with every printing and art variant and its price.",
+      "Add the exact printing, finish, condition and language you own, or import a ManaBox CSV export.",
+      "Your collection syncs across devices when you sign in with Google, and works offline.",
+      "New sets are added automatically on release day by a daily GitHub Actions job.",
+      "Export your collection as a ManaBox-compatible CSV or a JSON backup at any time.",
+      "Browse a shared collection, with prices from TCGplayer, Card Kingdom and MTGGoldfish."
+    ],
+    "icon": "assets/icons/manabin.svg",
+    "skills": [
+      "TypeScript",
+      "Data pipelines",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Preact",
+      "TypeScript",
+      "Vite",
+      "Firebase",
+      "Scryfall API"
+    ],
+    "links": [
+      {
+        "label": "Open ManaBin",
+        "url": "https://mendus59.github.io/ManaBin/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/ManaBin"
+      }
+    ]
+  },
+  {
     "slug": "rentalrater",
     "name": "RentalRater",
     "tagline": "Rate Washington and Oregon property listings as short-term rental investments, with a Buy, Close or Don't buy verdict for each.",
