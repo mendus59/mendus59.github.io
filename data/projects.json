@@ -887,5 +887,25 @@
         "url": "https://github.com/mendus59/yt-dlp-GUI"
       }
     ]
+  },
+  {
+    "slug": "happenings",
+    "name": "Happenings",
+    "tagline": "",
+    "description": [],
+    "icon": "assets/icons/happenings.svg",
+    "skills": [],
+    "stack": [],
+    "links": [
+      {
+        "label": "Open Happenings",
+        "url": "https://mendus59.github.io/Happenings/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/Happenings"
+      }
+    ]
   }
 ]
