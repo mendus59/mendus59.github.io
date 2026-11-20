@@ -4,7 +4,7 @@
     "name": "ManaBin",
     "tagline": "A free web app for tracking a Magic: The Gathering collection, with every card and printing and Scryfall-style search.",
     "description": [
-      "Open to a dashboard of your collection's value, its price change over the week, recent additions, decks and binders.",
+      "Open to a dashboard of your collection's value, its change since the last monthly price update, recent additions, decks and binders.",
       "Browse the full paper card library, with every printing and art variant, updated on each set's release day.",
       "Install it on a phone and scan cards with the camera, then fix printing, finish or condition and save them to a binder.",
       "Add the exact printing, finish, condition and language you own, sort cards into binders, and import or export ManaBox CSVs.",
@@ -459,7 +459,8 @@
     "description": [
       "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
       "Free daily ingestion of public records (Federal Register, Congress, Supreme Court opinions) into a citation graph.",
-      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget."
+      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget.",
+      "Marks each checked citation in a ruling or executive document as appropriate, a stretch, or improper, with the reason."
     ],
     "icon": "assets/icons/is_this_normal.svg",
     "skills": [
@@ -529,7 +530,7 @@
     "tagline": "Share a Magic: The Gathering collection with card images and Scryfall-style search.",
     "description": [
       "Turns a ManaBox export into a fast static site; all searching happens in the browser.",
-      "Prices refresh weekly from TCGplayer, Card Kingdom and MTGGoldfish, taking the highest for each finish."
+      "Prices refresh monthly, on the 1st, from TCGplayer, Card Kingdom and MTGGoldfish, taking the highest for each finish."
     ],
     "icon": "assets/icons/mtg.svg",
     "skills": [
