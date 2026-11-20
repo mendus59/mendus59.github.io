@@ -116,11 +116,11 @@
     "tagline": "Turn a solo guitar recording into classical guitar sheet music you can play back, check against the original and edit, all in the browser.",
     "description": [
       "Transcribe an audio or MP4 video file (all of it or a chosen part), a YouTube video played in the page, or your microphone into classical guitar notation.",
+      "When a video shows tablature on screen, it is read and joined with the sound, so notes, strings, frets and barlines follow the tab.",
       "Scores are engraved like a published edition: the key found by ear and its signature, notation over tablature, two voices, fingerings, string numbers, barres and chord names.",
       "Play the score with a moving cursor, tempo control, looping, metronome and count-in, or hear the original recording in step with it.",
       "Check every written note against the recording, and compare the arrangement with the composer's original score to find missing melody notes and stray ones.",
-      "Edit any note, rhythm or fingering, write a new score from scratch, or import a MusicXML or Guitar Pro file as an editable score.",
-      "Sign in with Google or email to save scores to your library, and export to PDF, MIDI or Guitar Pro."
+      "Edit any note, rhythm or fingering, write a new score, or import MusicXML or Guitar Pro; sign in to save scores and export to PDF, MIDI or Guitar Pro."
     ],
     "icon": "assets/icons/luthierspen.svg",
     "skills": [
@@ -459,7 +459,7 @@
     "description": [
       "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
       "Free daily ingestion of public records (Federal Register, Congress, Supreme Court opinions) into a citation graph.",
-      "AI analysis scored against versioned rubrics, which only runs on approval and within a set budget.",
+      "New entries are scored automatically each day against versioned rubrics, within a small daily budget.",
       "Marks each checked citation in a ruling or executive document as appropriate, a stretch, or improper, with the reason."
     ],
     "icon": "assets/icons/is_this_normal.svg",
