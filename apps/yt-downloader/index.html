@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YT Downloader · Pat Mendus</title>
+  <meta name="description" content="A free Windows desktop app that puts a simple window on top of yt-dlp, with a web app that opens it with your settings filled in.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../app-page.css">
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../../">← All projects</a>
+
+    <header class="hero">
+      <img src="icon.svg" alt="" width="88" height="88">
+      <div>
+        <h1>YT Downloader</h1>
+        <p>A simple Windows window on top of yt-dlp: paste a link, pick a quality, download.</p>
+      </div>
+    </header>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/mendus59/yt-dlp-GUI/releases/latest/download/YT-Downloader.exe">Download for Windows (.exe)</a>
+      <a class="btn" href="https://mendus59.github.io/yt-dlp-GUI/">Open the web app</a>
+      <a class="btn" href="https://github.com/mendus59/yt-dlp-GUI">Source on GitHub</a>
+    </div>
+    <p class="muted">Free, one file of about 60 MB, for Windows 10 and 11. No installer, no account. Downloads run on your own PC.</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Paste and go:</strong> one or more video, playlist or channel URLs at once.</li>
+      <li><strong>Video or audio:</strong> set a maximum quality and a minimum (videos that don't reach it are skipped), or download audio only as mp3, m4a, opus, wav or flac.</li>
+      <li><strong>Whole playlists and channels,</strong> optional English subtitles, and the video ID in file names if you want it.</li>
+      <li><strong>Stays in control:</strong> live progress, <em>Skip current video</em>, <em>Cancel all</em>, and it keeps going when one video fails.</li>
+      <li><strong>Everything bundled:</strong> Python, yt-dlp and deno (the JavaScript runtime YouTube now requires). A <em>Get ffmpeg</em> button adds ffmpeg once, for 1080p+ merging and audio conversion.</li>
+      <li><strong>Web app:</strong> the <a href="https://mendus59.github.io/yt-dlp-GUI/">web page</a> builds your settings and its <em>Open in YT Downloader</em> button launches the app with them filled in, through a <code>ytdlp-gui://</code> link.</li>
+    </ul>
+
+    <h2 id="install">Install on Windows</h2>
+    <div class="panel">
+      <ol>
+        <li>Download <a href="https://github.com/mendus59/yt-dlp-GUI/releases/latest/download/YT-Downloader.exe">YT-Downloader.exe</a> and put it anywhere, such as your Desktop.</li>
+        <li>Double-click it. The app isn't code-signed, so Windows SmartScreen may warn you: click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+        <li>For 1080p and higher, or mp3 conversion, click <strong>Get ffmpeg</strong> once.</li>
+        <li>Paste a URL, choose your options and click download. To start from the browser, use the web app's <strong>Open in YT Downloader</strong> button; Windows hands the link to the app (no admin rights needed).</li>
+      </ol>
+    </div>
+    <p class="muted">New versions are published as GitHub Releases; the download link above always gets the newest. <a href="https://github.com/mendus59/yt-dlp-GUI/releases/latest">Release notes</a></p>
+
+    <h2>Why the web app doesn't download videos itself</h2>
+    <p>GitHub Pages only serves static files, and browsers block pages from fetching video from other sites. A public download server would cost money, get blocked by YouTube and invite abuse, so the web app hands your settings to the desktop app and downloads happen on your computer.</p>
+    <p class="muted">Only download content you have the right to. YouTube's Terms of Service restrict downloading outside its own features. Not affiliated with YouTube or the yt-dlp project.</p>
+
+    <h2>Built with</h2>
+    <ul class="chips">
+      <li>Python</li><li>Tkinter</li><li>yt-dlp</li><li>deno</li><li>ffmpeg</li><li>PyInstaller</li><li>PowerShell</li><li>GitHub Actions</li>
+    </ul>
+  </main>
+
+  <footer class="wrap muted">Made by <a href="../../">Pat Mendus</a></footer>
+</body>
+</html>

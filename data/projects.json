@@ -1,5 +1,41 @@
 [
   {
+    "slug": "myactuary",
+    "name": "MyActuary",
+    "tagline": "Build a personal actuarial life table from U.S. mortality data and evidence-based risk factors, entirely in your browser.",
+    "description": [
+      "Starts from the SSA 2023 period life table and adjusts it for 30 factors grouped the way life insurers underwrite.",
+      "Covers health and habits, medical history, family history and genetics, risky jobs and hobbies, driving, and life circumstances.",
+      "Shows your life expectancy, survival curve, chance of reaching milestone ages and an illustrative underwriting-style class.",
+      "Ranks the changeable factors costing you the most years by how much life expectancy you could gain.",
+      "Nothing leaves your browser: no backend, no analytics, and every network request is blocked.",
+      "Download a PDF report with the full methodology and 45 references, and load it later to pick up where you left off."
+    ],
+    "icon": "assets/icons/myactuary.svg",
+    "skills": [
+      "JavaScript",
+      "Financial modeling",
+      "Data visualization"
+    ],
+    "stack": [
+      "JavaScript",
+      "ES modules",
+      "jsPDF",
+      "SSA life tables"
+    ],
+    "links": [
+      {
+        "label": "Open MyActuary",
+        "url": "https://mendus59.github.io/MyActuary/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/MyActuary"
+      }
+    ]
+  },
+  {
     "slug": "manabin",
     "name": "ManaBin",
     "tagline": "A free web app for tracking a Magic: The Gathering collection, with every card and printing and Scryfall-style search.",
@@ -155,6 +191,7 @@
     "description": [
       "A library of 24 vitamins, minerals and supplements, each with its documented absorption, transport, transformation, storage and excretion pathway.",
       "Paste a SMILES structure and RDKit calculates the formula, logP, polar surface area and Lipinski/Veber screen, and draws the 2D structure.",
+      "Or enter just a molecular formula, including hydrates like C4H9N3O2·H2O, and tick its structural features by hand.",
       "A rule-based prediction of how a dose splits between energy, cofactor use, storage, gut fermentation and excretion.",
       "Checks your dose against US adult RDA/AI and upper limits, and estimates the usable energy."
     ],
@@ -190,7 +227,9 @@
       "Eight built-in sorts (Bubble, Selection, Insertion, Cocktail Shaker, Shell, Merge, Quick, Heap) with the running line of code highlighted beside a live bar chart.",
       "Edit any algorithm or write your own sort() and watch your version run, safely sandboxed in a Web Worker.",
       "Worst-case data sets for every algorithm, plus your own values, replayed in the same order so the comparison table is a fair head-to-head.",
-      "Scales to 10,000 bars, from 1 step per second up to millions."
+      "Run every sort on one data set at once, and see each one's best, average and worst time, space and stability.",
+      "Whiteboard tutorials explain each sort in plain English, with hand-drawn blocks that hop and swap as you watch.",
+      "Scales to 10,000 bars, from 1 step per second up to full speed."
     ],
     "icon": "assets/icons/sortsight.svg",
     "skills": [
@@ -222,9 +261,11 @@
     "name": "Voidlight",
     "tagline": "An original survivor-style bullet hell for the browser.",
     "description": [
-      "Survive 15 minutes of escalating swarms and three bosses while your gear fires on its own.",
-      "55 items across five slots, each with its own bullet pattern; every item adds its effect to all your bullets, and some effect pairs trigger reactions.",
-      "Fuse maxed items, unlock 11 characters, and spend gold in the Forge on permanent upgrades, saved in your browser or, if you sign in with Google, in the cloud."
+      "Survive 15 minutes of escalating swarms and three bosses on each of 14 levels while your gear fires on its own.",
+      "74 items across five slots, each with its own bullet pattern; every item adds its effect to all your bullets, and some effect pairs trigger reactions.",
+      "Fuse maxed items through four fusion tiers, and forge Nexus items from recipes you earn.",
+      "Achievements open new levels, item categories and 15 characters; spend gold in the Forge on permanent upgrades and attunements.",
+      "Progress is saved in your browser or, if you sign in with Google, in the cloud."
     ],
     "icon": "assets/icons/voidlight.svg",
     "skills": [
@@ -256,6 +297,7 @@
       "Log a find from a photo: the time and GPS location come from the photo's EXIF data.",
       "A weekly likelihood map per species, built from research-grade iNaturalist sightings, USDA host-tree maps, elevation, and this year's rain and temperature against past finds.",
       "A trail finder that ranks OpenStreetMap trails by the chance of a mushroom along them and how accessible the trail is.",
+      "Tap a trail or draw an area to see every tracked mushroom ranked by how likely it is there on a given date.",
       "Installable as an app and works offline."
     ],
     "icon": "assets/icons/mushmap.svg",
@@ -296,6 +338,7 @@
       "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
       "Finds the next day the tide is low enough during the hours you want to be out, and rates each day.",
       "Shows the water height hour by hour for any beach or NOAA tide station.",
+      "A tide map of every NOAA station in the US, with a 24-hour slider, place search and a 7-day view per station.",
       "Push alerts for good days at your favorite beaches, plus a home-screen widget with the tide height now and tap-to-refresh."
     ],
     "icon": "assets/icons/coastal-forager.png",
@@ -374,7 +417,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/TideWidget"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "slug": "argument-mapper",
@@ -554,7 +598,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/manabox-viewer"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "slug": "action-mimic",
@@ -591,7 +636,8 @@
     "name": "Executive Examiner",
     "tagline": "Presidential documents from the Federal Register, collected and summarized.",
     "description": [
-      "Pulls executive orders and other presidential documents from the Federal Register API and publishes them with summaries and PDF links."
+      "Checks the Federal Register API every hour for new presidential documents: executive orders, proclamations, memoranda, determinations and notices.",
+      "Lists each executive order with its publication date, a summary from Kagi's Universal Summarizer and a link to the official PDF."
     ],
     "icon": "assets/icons/fedreg.svg",
     "skills": [
@@ -619,8 +665,12 @@
   {
     "slug": "cs513-bing-tile-stitching",
     "name": "CS513 Bing Tile Stitching",
-    "tagline": "This script requires use of OpenCV",
-    "description": [],
+    "tagline": "A Python and OpenCV script that downloads Bing Maps aerial tiles for an area and stitches them into one image.",
+    "description": [
+      "Converts latitude and longitude to Bing tile coordinates and quadkeys at a chosen zoom level.",
+      "Fetches each tile and joins them into a single high-resolution map image.",
+      "A CS513 group project with Jean-Rodney Larrieux and Mustafa Kabukcu."
+    ],
     "icon": "assets/icons/cs513-bing-tile-stitching.svg",
     "skills": [
       "Python"
@@ -635,14 +685,17 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs513-point-cloud-perspective-matching",
     "name": "CS513 Point Cloud Perspective Matching",
-    "tagline": "",
-    "description": [],
+    "tagline": "Matches a 3D LiDAR point cloud to a camera's perspective image and measures the angle of error between them.",
+    "description": [
+      "Projects geo-referenced points into the camera's view from its position and orientation quaternion.",
+      "Compares the projection with the photo using OpenCV and reports how far off the camera angle is.",
+      "A CS513 group project with Jean-Rodney Larrieux and Mustafa Kabukcu."
+    ],
     "icon": "assets/icons/cs513-point-cloud-perspective-matching.svg",
     "skills": [
       "Python"
@@ -657,14 +710,17 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs559-iris-recognition",
     "name": "CS559 Iris Recognition",
-    "tagline": "",
-    "description": [],
+    "tagline": "An iris recognition system in Python that encodes irises from eye images and matches them against a gallery.",
+    "description": [
+      "Builds iris codes from eye images with OpenCV and NumPy.",
+      "Matches a probe against the gallery by Hamming distance with a tunable threshold.",
+      "Includes test runners that measure match accuracy over the gallery; a CS559 class project."
+    ],
     "icon": "assets/icons/cs559-iris-recognition.svg",
     "skills": [
       "Python"
@@ -679,14 +735,17 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs586-software-design-implementation",
     "name": "CS586 Software Design Implementation",
-    "tagline": "",
-    "description": [],
+    "tagline": "A Java gas pump controller built from an MDA-EFSM design with State, Strategy and Abstract Factory patterns.",
+    "description": [
+      "Two gas pump variants share one platform-independent state machine.",
+      "Each pump's actions (set price, store data, print receipt) plug in as interchangeable strategies.",
+      "A CS586 software design term project."
+    ],
     "icon": "assets/icons/cs586-software-design-implementation.svg",
     "skills": [
       "Java"
@@ -703,14 +762,15 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "foraging-blog",
     "name": "Foraging Blog",
-    "tagline": "Boilerplate blog created from https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify",
-    "description": [],
+    "tagline": "A Gatsby and Netlify CMS starter blog, set up for writing about foraging.",
+    "description": [
+      "Posts are written in Markdown or in the Netlify CMS editor and built into a static site with Gatsby."
+    ],
     "icon": "assets/icons/foraging-blog.svg",
     "skills": [
       "JavaScript"
@@ -725,14 +785,15 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "interview-practice",
     "name": "Interview_Practice",
-    "tagline": "",
-    "description": [],
+    "tagline": "Python solutions to classic coding-interview questions.",
+    "description": [
+      "Covers arrays, binary trees, linked lists and stacks, such as the k largest elements, lowest common ancestor and a stack with O(1) getMin."
+    ],
     "icon": "assets/icons/interview-practice.svg",
     "skills": [
       "Python"
@@ -747,8 +808,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "jsch6ass",
@@ -765,14 +825,15 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "learning-jamstack",
     "name": "Learning the JAMStack",
-    "tagline": "This project was created while following the JAMStack Tutorial https://www.youtube.com/watch?v=A_l0qrPUJds",
-    "description": [],
+    "tagline": "A JAMstack practice site built while following a tutorial, deployed to Netlify with continuous integration.",
+    "description": [
+      "A static front end with serverless functions, built with npm and deployed from GitHub to Netlify."
+    ],
     "icon": "assets/icons/learning-jamstack.svg",
     "skills": [
       "JavaScript"
@@ -788,8 +849,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "vectorious",
@@ -862,26 +922,40 @@
   {
     "slug": "yt-dlp-gui",
     "name": "YT Downloader (yt-dlp GUI)",
-    "tagline": "A free Windows desktop app that puts a simple window on top of yt-dlp, plus a GitHub Pages web app that opens the desktop app with your settings filled in.",
-    "description": [],
+    "tagline": "A free Windows desktop app that puts a simple window on top of yt-dlp, with a web app that opens it with your settings filled in.",
+    "description": [
+      "Paste video, playlist or channel URLs and download video, with a maximum and minimum quality, or audio only as mp3, m4a, opus, wav or flac.",
+      "Live progress, skip the current video or cancel all, and keep going when one video fails.",
+      "Optional English subtitles and video IDs in file names; a Get ffmpeg button sets up 1080p+ merging and audio conversion.",
+      "One Windows 10/11 exe with Python, yt-dlp and deno bundled, so there is nothing to install.",
+      "The web app builds your settings and opens the desktop app with them through a ytdlp-gui:// link."
+    ],
     "icon": "assets/icons/yt-dlp-gui.svg",
     "skills": [
       "Python",
+      "Desktop apps",
       "GitHub Actions"
     ],
     "stack": [
       "Python",
+      "Tkinter",
+      "yt-dlp",
+      "PyInstaller",
       "PowerShell"
     ],
     "links": [
       {
-        "label": "Open YT Downloader (yt-dlp GUI)",
+        "label": "Open web app",
         "url": "https://mendus59.github.io/yt-dlp-GUI/",
         "primary": true
       },
       {
         "label": "Download for Windows",
-        "url": "https://github.com/mendus59/yt-dlp-GUI/releases/download/v1.0.0/YT-Downloader.exe"
+        "url": "https://github.com/mendus59/yt-dlp-GUI/releases/latest/download/YT-Downloader.exe"
+      },
+      {
+        "label": "About & install",
+        "url": "apps/yt-downloader/"
       },
       {
         "label": "Source",
@@ -892,11 +966,31 @@
   {
     "slug": "happenings",
     "name": "Happenings",
-    "tagline": "",
-    "description": [],
+    "tagline": "One calendar for the events at the small businesses and venues you love.",
+    "description": [
+      "Save any venue's events page and Happenings checks it every few hours, gathering everything into one list and calendar.",
+      "New events stay highlighted until you mark them Interested, Favorite or Hide, and are sorted into types like Live Music, Comedy and Markets.",
+      "Events you planned on that change or vanish from the venue's page are flagged, so you know a plan changed.",
+      "Draw your own area on a map to find places nearby, new Washington openings from liquor-license notices, and closings.",
+      "A Restaurants tab with separate dine-in, takeout and delivery areas, favorites and dislikes for each, and search across menu dishes.",
+      "Sign in with Google or email; it all runs on free tiers of GitHub Pages, GitHub Actions and Firebase."
+    ],
     "icon": "assets/icons/happenings.svg",
-    "skills": [],
-    "stack": [],
+    "skills": [
+      "JavaScript",
+      "Firebase",
+      "Data pipelines",
+      "Maps & geospatial",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "JavaScript",
+      "esbuild",
+      "Firebase Auth",
+      "Firestore",
+      "Playwright",
+      "OpenStreetMap"
+    ],
     "links": [
       {
         "label": "Open Happenings",
