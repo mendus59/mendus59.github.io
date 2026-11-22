@@ -1002,5 +1002,34 @@
         "url": "https://github.com/mendus59/Happenings"
       }
     ]
+  },
+  {
+    "slug": "investing-barometer",
+    "name": "Investing Barometer",
+    "tagline": "A static web page, hosted on GitHub Pages, that reads current interest rates, bond yields, market index returns and housing data once a day and turns them…",
+    "description": [],
+    "icon": "assets/icons/investing-barometer.svg",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "links": [
+      {
+        "label": "Open Investing Barometer",
+        "url": "https://mendus59.github.io/Investing-Barometer/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/Investing-Barometer"
+      }
+    ]
   }
 ]
