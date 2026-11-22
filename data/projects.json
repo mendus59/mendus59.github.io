@@ -417,7 +417,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/TideWidget"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "slug": "argument-mapper",
@@ -597,7 +598,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/manabox-viewer"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "slug": "action-mimic",
@@ -683,8 +685,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs513-point-cloud-perspective-matching",
@@ -709,8 +710,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs559-iris-recognition",
@@ -735,8 +735,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "cs586-software-design-implementation",
@@ -763,8 +762,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "foraging-blog",
@@ -787,8 +785,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "interview-practice",
@@ -811,8 +808,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "jsch6ass",
@@ -829,8 +825,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "learning-jamstack",
@@ -854,8 +849,7 @@
         "primary": true
       }
     ],
-    "hidden": true,
-    "autoHidden": true
+    "hidden": true
   },
   {
     "slug": "vectorious",
