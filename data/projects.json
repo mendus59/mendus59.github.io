@@ -374,7 +374,7 @@
     "description": [
       "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
       "Finds the next day the tide is low enough during the hours you want to be out, and rates each day.",
-      "Shows the water height hour by hour for any beach or NOAA tide station.",
+      "Shows the water height hour by hour, and every high and low up to 8 weeks ahead, for any beach or NOAA tide station.",
       "A tide map of every NOAA station in the US, with a 24-hour slider, place search and a 7-day view per station.",
       "Push alerts for good days at your favorite beaches, plus a home-screen widget with the tide height now and tap-to-refresh."
     ],
@@ -541,7 +541,7 @@
       "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
       "Free daily ingestion of public records (Federal Register, Congress, Supreme Court opinions) into a citation graph.",
       "New entries are scored automatically each day against versioned rubrics, within a small daily budget.",
-      "Marks each checked citation in a ruling or executive document as appropriate, a stretch, or improper, with the reason."
+      "Marks each checked citation as appropriate, a stretch, or improper, with the reason, and flags and filters items that cite improperly."
     ],
     "icon": "assets/icons/is_this_normal.svg",
     "skills": [
