@@ -1,5 +1,42 @@
 [
   {
+    "slug": "scriptless",
+    "name": "Scriptless",
+    "tagline": "A privacy-first reader: paste a link and get only the article's words, with no scripts, ads, trackers or cookies from the original site.",
+    "description": [
+      "Fetches the page on a server and sends your browser plain, readable text, so the site never sees your IP address or browser.",
+      "Uses Mozilla's Readability to pull out the article, then keeps only headings, paragraphs, lists, quotes, code, tables and links.",
+      "Strips tracking parameters like utm_* and fbclid from the address, every redirect and every link in the article.",
+      "Links inside an article open through Scriptless too, so following them stays private.",
+      "When a site blocks the request, reads the Internet Archive's most recent copy instead.",
+      "Zero JavaScript reaches your browser, and there are no cookies, accounts or logs."
+    ],
+    "icon": "assets/icons/scriptless.svg",
+    "skills": [
+      "JavaScript",
+      "Web security",
+      "Privacy engineering"
+    ],
+    "stack": [
+      "Node.js",
+      "Cloudflare Workers",
+      "Mozilla Readability",
+      "linkedom",
+      "sanitize-html"
+    ],
+    "links": [
+      {
+        "label": "Open Scriptless",
+        "url": "https://mendus59.github.io/Scriptless/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/Scriptless"
+      }
+    ]
+  },
+  {
     "slug": "myactuary",
     "name": "MyActuary",
     "tagline": "Build a personal actuarial life table from U.S. mortality data and evidence-based risk factors, entirely in your browser.",
