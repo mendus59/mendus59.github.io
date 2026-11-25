@@ -1,5 +1,38 @@
 [
   {
+    "slug": "notsomagiceye",
+    "name": "NotSoMagicEye",
+    "tagline": "A phone-friendly web app that reveals the hidden 3D picture in an autostereogram from a photo, and makes new ones from any shape or text.",
+    "description": [
+      "Take a photo with your phone or upload an image, and it finds the pattern's repeat width and decodes a grey depth map.",
+      "View the result as a depth image, an inverted version or an outline, with fine tuning for repeat width, smoothing and depth search.",
+      "Create your own from hidden text, a built-in shape or an uploaded image, over static, pebbles, marble, confetti or a photo texture.",
+      "Supports wall-eyed and cross-eyed output, depth strength, repeat count and output size, and saves a PNG.",
+      "Runs entirely in the browser as a single static page, so no images leave your device."
+    ],
+    "icon": "assets/icons/notsomagiceye.svg",
+    "skills": [
+      "JavaScript",
+      "HTML canvas",
+      "Image processing"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML canvas"
+    ],
+    "links": [
+      {
+        "label": "Open NotSoMagicEye",
+        "url": "https://mendus59.github.io/NotSoMagicEye/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/NotSoMagicEye"
+      }
+    ]
+  },
+  {
     "slug": "scriptless",
     "name": "Scriptless",
     "tagline": "A privacy-first reader: paste a link and get only the article's words, with no scripts, ads, trackers or cookies from the original site.",
