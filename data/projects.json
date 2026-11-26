@@ -1103,5 +1103,31 @@
         "url": "https://github.com/mendus59/Investing-Barometer"
       }
     ]
+  },
+  {
+    "slug": "eulerlab",
+    "name": "EulerLab",
+    "tagline": "A learning companion for mathematics, starting with differential equations.",
+    "description": [],
+    "icon": "assets/icons/eulerlab.svg",
+    "skills": [
+      "TypeScript",
+      "GitHub Actions"
+    ],
+    "stack": [
+      "TypeScript",
+      "CSS"
+    ],
+    "links": [
+      {
+        "label": "Open EulerLab",
+        "url": "https://mendus59.github.io/EulerLab/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/EulerLab"
+      }
+    ]
   }
 ]
