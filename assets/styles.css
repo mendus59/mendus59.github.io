@@ -79,6 +79,19 @@ a { color: var(--accent); }
   display: flex;
   flex-direction: column;
 }
+.card-shot-link { display: block; margin: -20px -20px 16px; }
+.card-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--chip);
+}
+.card > .card-shot { margin: -20px -20px 16px; width: calc(100% + 40px); }
 .card-head { display: flex; gap: 14px; align-items: flex-start; }
 .card-head > div { min-width: 0; }
 .card-icon { border-radius: 12px; flex: none; }
@@ -121,6 +134,9 @@ a { color: var(--accent); }
   .projects { gap: 14px; }
   .card { padding: 16px; border-radius: 14px; }
   .card-icon { width: 48px; height: 48px; }
+  .card-shot-link { margin: -16px -16px 14px; }
+  .card > .card-shot { margin: -16px -16px 14px; width: calc(100% + 32px); }
+  .card-shot { border-radius: 13px 13px 0 0; }
   .card-links .btn { flex: 1 1 auto; text-align: center; padding: 10px 14px; }
   /* One swipeable row of filter chips instead of six wrapped rows. */
   .filters {

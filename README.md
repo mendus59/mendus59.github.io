@@ -24,6 +24,8 @@ Add an entry to `data/projects.json`:
 | `iconSync` | Optional. `false` keeps `icon` as set here instead of following the project's own icon |
 | `linkSync` | Optional. `false` stops links being added or repointed automatically |
 | `autoHidden` | Set by discovery on a card hidden only because it had no live site; the sync shows it once it has one |
+| `screenshot` | Optional. Path to a 16:10 screenshot under `assets/screenshots/`, shown at the top of the card (kept current by the card sync) |
+| `screenshotSync` | Optional. `false` keeps `screenshot` as set here instead of following the project's README |
 | `readme` | Optional. `"owner/repo"` to sync the summary from a repo other than the card's GitHub source link |
 
 ## Keeping cards current
@@ -37,6 +39,7 @@ hid it for having no live site (`autoHidden`), so admin-panel settings are kept.
 | --- | --- | --- | --- |
 | Summary and bullets | The README's `site-summary` section (below) | [`sync-summaries.mjs`](scripts/sync-summaries.mjs) | `summarySync: false` |
 | Icon | A file the README names with `<!-- site-icon: path/in/repo.svg -->`, else a browser extension's root `manifest.json` icon, else the live app's SVG favicon, web-manifest icon or apple-touch-icon (PNGs must be square and at least 128px). Saved as `assets/icons/<slug>.<ext>` | [`sync-cards.mjs`](scripts/sync-cards.mjs) | `iconSync: false` (set automatically when you upload an icon in the admin panel) |
+| Screenshot | The image the README names with `<!-- site-screenshot: docs/screenshot.jpg -->` (JPEG, PNG or WebP, at most 1 MB), saved as `assets/screenshots/<slug>.<ext>`. See [Screenshots](#screenshots) | `sync-cards.mjs` | `screenshotSync: false` |
 | Live site | The repo's GitHub Pages site or homepage, added as the main button when the card only has GitHub links | `sync-cards.mjs` | `linkSync: false` |
 | Downloads | GitHub releases: a download link whose file is gone is repointed to the newest release with that file type (in the `apps/` pages too), and a new file type (`.apk`, `.exe`/`.msi`, `.dmg`, `.AppImage`/`.deb`) gets a button | `sync-cards.mjs` | `linkSync: false` |
 | Store pages | Chrome Web Store, Google Play, App Store, Firefox and Edge add-on links anywhere in the README | `sync-cards.mjs` | `linkSync: false` |
@@ -62,6 +65,27 @@ panel or here). To check a README locally: `node scripts/sync-summaries.mjs --ch
 
 Each project repo has a `Site summary` workflow that checks the section on every pull request, and a
 `CLAUDE.md` note asking for the section to be updated whenever user-facing features change.
+
+### Screenshots
+
+Each project repo keeps a screenshot of its live app at `docs/screenshot.jpg`, shows it in its README and
+names it for the card sync:
+
+```markdown
+<!-- site-screenshot: docs/screenshot.jpg -->
+![MyApp](docs/screenshot.jpg)
+```
+
+The project's `Screenshot` workflow retakes it whenever a new version goes out: after each successful Pages
+deploy started by a push (not the scheduled data refreshes), on each published release, and on demand from the
+Actions tab. It calls the shared [`project-screenshot.yml`](.github/workflows/project-screenshot.yml), which opens
+the live page at 1280×800 in the runner's Chrome with [`capture-screenshot.mjs`](scripts/capture-screenshot.mjs)
+and commits the JPEG to the project's default branch only when more than 2% of its pixels changed, so clocks and
+animations don't pile images into the repo's history. It uploads no artifacts. A caller can pass `prepare`
+(JavaScript run on the page first, for example to open a demo), `wait` or `path`.
+
+To retake one by hand, run `node scripts/capture-screenshot.mjs --url <live url> --out docs/screenshot.jpg`
+from a folder with `playwright` installed.
 
 ## New projects
 

@@ -11,12 +11,18 @@ export function safeUrl(url) {
   return u;
 }
 
-export function projectCard(p, { iconSrc } = {}) {
+export function projectCard(p, { iconSrc, shotSrc } = {}) {
   const li = document.createElement("li");
   li.className = "card";
   li.id = p.slug;
   const icon = iconSrc ?? (p.icon ? safeUrl(p.icon) : "");
+  const shot = shotSrc ?? (p.screenshot ? safeUrl(p.screenshot) : "");
+  const main = (p.links ?? []).find((l) => l.primary) ?? (p.links ?? [])[0];
+  const shotImg = shot
+    ? `<img class="card-shot" src="${escape(shot)}" alt="Screenshot of ${escape(p.name)}" width="1280" height="800" loading="lazy" decoding="async">`
+    : "";
   li.innerHTML = `
+    ${shot ? (main ? `<a class="card-shot-link" href="${escape(safeUrl(main.url))}" tabindex="-1" aria-hidden="true">${shotImg}</a>` : shotImg) : ""}
     <div class="card-head">
       ${icon ? `<img class="card-icon" src="${escape(icon)}" alt="" width="56" height="56">` : ""}
       <div>

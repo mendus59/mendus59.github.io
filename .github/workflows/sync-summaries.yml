@@ -30,7 +30,7 @@ jobs:
         run: node scripts/sync-summaries.mjs
         env:
           GITHUB_TOKEN: ${{ github.token }}
-      - name: Pull icons, live links and downloads
+      - name: Pull icons, screenshots, live links and downloads
         run: node scripts/sync-cards.mjs
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -38,7 +38,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add data/projects.json assets/icons apps
+          git add data/projects.json assets/icons assets/screenshots apps
           if git diff --cached --quiet; then
             echo "Cards already match their projects."
             exit 0

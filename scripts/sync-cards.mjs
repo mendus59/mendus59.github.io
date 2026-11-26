@@ -14,6 +14,11 @@
 //   Raster icons must be PNG, at least 128px and square. The icon is saved as assets/icons/<slug>.<ext>.
 //   If nothing qualifies, the card keeps the icon it has.
 //
+// Screenshot (turn off per card with "screenshotSync": false):
+//   the JPEG, PNG or WebP the README names with <!-- site-screenshot: docs/screenshot.jpg -->, saved as
+//   assets/screenshots/<slug>.<ext> and shown at the top of the card. Each project repo's "Screenshot"
+//   workflow retakes it on every release (see .github/workflows/project-screenshot.yml).
+//
 // Links (turn off per card with "linkSync": false):
 //   - The live site: when the repo gains a GitHub Pages site or a homepage and the card has nothing
 //     but GitHub links, an "Open <name>" main button is added. A card that discovery hid only because
@@ -25,7 +30,7 @@
 //     README get a button if the card doesn't have one for that store.
 //   Links are only ever added or repointed, never removed; anything that looks broken is reported.
 
-import { readFile, writeFile, appendFile, readdir } from "node:fs/promises";
+import { readFile, writeFile, appendFile, readdir, mkdir } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { cardRepo } from "./sync-summaries.mjs";
 
@@ -33,6 +38,7 @@ const ROOT = new URL("../", import.meta.url);
 const DATA_PATH = new URL("data/projects.json", ROOT);
 const MAX_ICON_BYTES = 512 * 1024;
 const MIN_ICON_PX = 128;
+const MAX_SHOT_BYTES = 1024 * 1024;
 
 const DOWNLOAD_KINDS = [
   { kind: "apk", test: /\.apk$/i, label: "Download Android APK" },
@@ -104,6 +110,18 @@ export function manifestIconSrcs(manifest) {
 
 /** The path or URL a README names with <!-- site-icon: ... -->, or null. */
 export const readmeIconRef = (md) => md?.match(/<!--\s*site-icon:\s*(\S+?)\s*-->/i)?.[1] ?? null;
+
+/** The path or URL a README names with <!-- site-screenshot: ... -->, or null. */
+export const readmeScreenshotRef = (md) => md?.match(/<!--\s*site-screenshot:\s*(\S+?)\s*-->/i)?.[1] ?? null;
+
+/** "jpg" | "png" | "webp" | null — whether these bytes are usable as a card screenshot. */
+export function screenshotKind(buf) {
+  if (!buf?.length || buf.length > MAX_SHOT_BYTES) return null;
+  if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return "jpg";
+  if (pngSize(buf)) return "png";
+  if (buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WEBP") return "webp";
+  return null;
+}
 
 /** Store links (deduped by store) in a README. */
 export function storeLinks(md) {
@@ -228,7 +246,7 @@ export async function syncCards({ dryRun }) {
   const original = await readFile(DATA_PATH, "utf8");
   const projects = JSON.parse(original);
   const report = [];
-  const iconWrites = new Map(); // relative path -> Buffer
+  const iconWrites = new Map(); // relative path -> Buffer (icons and screenshots)
   const urlMoves = []; // [oldUrl, newUrl] to apply to the apps/ pages too
 
   for (const p of projects) {
@@ -266,6 +284,27 @@ export async function syncCards({ dryRun }) {
           }
         } else if (found.tried.length) {
           notes.push(`kept the current icon (looked at: ${found.tried.slice(0, 4).join("; ")})`);
+        }
+      }
+
+      // ----- screenshot -----
+      const shotRef = p.screenshotSync !== false && readmeScreenshotRef(readme);
+      if (shotRef) {
+        try {
+          const buf = /^https:\/\//i.test(shotRef)
+            ? (await get(shotRef)).buf
+            : await repoFile(repo, shotRef).then((b) => b ?? Promise.reject(new Error("not found")));
+          const kind = screenshotKind(buf);
+          if (!kind) throw new Error(`not a JPEG, PNG or WebP of at most ${MAX_SHOT_BYTES / 1024} KB`);
+          const path = `assets/screenshots/${p.slug}.${kind}`;
+          const current = p.screenshot && !/^https?:/i.test(p.screenshot) ? await readFile(new URL(p.screenshot, ROOT)).catch(() => null) : null;
+          if (p.screenshot !== path || !current?.equals(buf)) {
+            iconWrites.set(path, buf);
+            p.screenshot = path;
+            notes.push(`screenshot updated from ${shotRef}`);
+          }
+        } catch (err) {
+          notes.push(`⚠️ kept the current screenshot (README site-screenshot ${shotRef}: ${err.message})`);
         }
       }
 
@@ -359,12 +398,13 @@ export async function syncCards({ dryRun }) {
   const updated = JSON.stringify(projects, null, 2) + "\n";
   const changed = updated !== original || iconWrites.size > 0 || pageWrites.size > 0;
   if (changed && !dryRun) {
+    await mkdir(new URL("assets/screenshots/", ROOT), { recursive: true });
     for (const [path, buf] of iconWrites) await writeFile(new URL(path, ROOT), buf);
     for (const [file, html] of pageWrites) await writeFile(file, html);
     await writeFile(DATA_PATH, updated);
   }
 
-  const summary = `## Project icon and link sync\n\n${report.join("\n")}\n\n${changed ? (dryRun ? "Would update" : "Updated") + " the cards." : "No changes."}\n`;
+  const summary = `## Project icon, screenshot and link sync\n\n${report.join("\n")}\n\n${changed ? (dryRun ? "Would update" : "Updated") + " the cards." : "No changes."}\n`;
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, summary);
 }

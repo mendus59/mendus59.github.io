@@ -1,0 +1,76 @@
+# Shared by the project repos: retakes a project's screenshot from its live site and commits it to the
+# project's default branch if it changed noticeably. The card sync then copies it onto the project's card
+# (see "Keeping cards current" in README.md). Each project calls it from a small "Screenshot" workflow:
+#
+#   jobs:
+#     screenshot:
+#       uses: mendus59/mendus59.github.io/.github/workflows/project-screenshot.yml@main
+#       permissions:
+#         contents: write
+#       with:
+#         url: https://mendus59.github.io/MyApp/
+#
+# It uploads no artifacts (nothing counts against Actions storage) and uses the runner's own Chrome.
+name: Project screenshot
+
+on:
+  workflow_call:
+    inputs:
+      url:
+        description: The live page to capture
+        type: string
+        required: true
+      path:
+        description: Where the screenshot goes in the project repo (the README's site-screenshot marker points here)
+        type: string
+        default: docs/screenshot.jpg
+      wait:
+        description: Milliseconds to wait after the page settles, for animations and data to load
+        type: number
+        default: 3000
+      prepare:
+        description: Optional JavaScript run on the page before the capture, e.g. to open a demo
+        type: string
+        default: ""
+      settle:
+        description: Seconds to wait first, so a deploy that just finished reaches the Pages CDN
+        type: number
+        default: 45
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Take the screenshot
+        id: shot
+        env:
+          URL: ${{ inputs.url }}
+          OUT: ${{ github.workspace }}/${{ inputs.path }}
+          WAIT: ${{ inputs.wait }}
+          PREPARE: ${{ inputs.prepare }}
+          SETTLE: ${{ inputs.settle }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/shot" && cd "$RUNNER_TEMP/shot"
+          curl -fsSL https://raw.githubusercontent.com/mendus59/mendus59.github.io/main/scripts/capture-screenshot.mjs -o capture.mjs
+          npm install --no-save --no-audit --no-fund --silent playwright-core@1.64.1
+          sleep "$SETTLE"
+          node capture.mjs --chrome --url "$URL" --out "$OUT" --wait "$WAIT" --prepare "$PREPARE"
+      - name: Commit it
+        if: steps.shot.outputs.changed == 'true'
+        env:
+          SHOT: ${{ inputs.path }}
+        run: |
+          git add "$SHOT"
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update screenshot [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${{ github.event.repository.default_branch }}" && git push origin HEAD:"${{ github.event.repository.default_branch }}" && break
+            sleep 5
+          done
