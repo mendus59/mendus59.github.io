@@ -30,7 +30,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/NotSoMagicEye"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/notsomagiceye.jpg"
   },
   {
     "slug": "scriptless",
@@ -67,7 +68,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/Scriptless"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/scriptless.jpg"
   },
   {
     "slug": "myactuary",
@@ -103,7 +105,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/MyActuary"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/myactuary.jpg"
   },
   {
     "slug": "manabin",
@@ -140,7 +143,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/ManaBin"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/manabin.jpg"
   },
   {
     "slug": "rentalrater",
@@ -176,7 +180,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/RentalRater"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/rentalrater.jpg"
   },
   {
     "slug": "whaletracker",
@@ -214,7 +219,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/WhaleTracker"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/whaletracker.jpg"
   },
   {
     "slug": "luthierspen",
@@ -252,7 +258,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/LuthiersPen"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/luthierspen.jpg"
   },
   {
     "slug": "metabolismmath",
@@ -287,7 +294,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/MetabolismMath"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/metabolismmath.jpg"
   },
   {
     "slug": "sortsight",
@@ -324,7 +332,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/SortSight"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/sortsight.jpg"
   },
   {
     "slug": "voidlight",
@@ -357,7 +366,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/voidlight"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/voidlight.jpg"
   },
   {
     "slug": "mushmap",
@@ -398,7 +408,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/mushmap"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/mushmap.jpg"
   },
   {
     "slug": "coastal-forager",
@@ -444,7 +455,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/costal_forager"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/coastal-forager.jpg"
   },
   {
     "slug": "tidewidget",
@@ -528,7 +540,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/argument_map"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/argument-mapper.jpg"
   },
   {
     "slug": "gatchi-evolution",
@@ -564,7 +577,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/GatchiEvolution"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/gatchi-evolution.jpg"
   },
   {
     "slug": "is_this_normal",
@@ -603,7 +617,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/is_this_normal"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/is_this_normal.jpg"
   },
   {
     "slug": "nominated",
@@ -638,7 +653,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/academy_award_tracker"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/nominated.jpg"
   },
   {
     "slug": "mtg-collection-viewer",
@@ -955,7 +971,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/vectorious"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/vectorious.jpg"
   },
   {
     "slug": "webwander",
@@ -989,7 +1006,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/webwander"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/webwander.jpg"
   },
   {
     "slug": "yt-dlp-gui",
@@ -1033,7 +1051,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/yt-dlp-GUI"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/yt-dlp-gui.jpg"
   },
   {
     "slug": "happenings",
@@ -1073,7 +1092,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/Happenings"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/happenings.jpg"
   },
   {
     "slug": "investing-barometer",
@@ -1102,7 +1122,8 @@
         "label": "Source",
         "url": "https://github.com/mendus59/Investing-Barometer"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/investing-barometer.jpg"
   },
   {
     "slug": "eulerlab",
@@ -1128,6 +1149,7 @@
         "label": "Source",
         "url": "https://github.com/mendus59/EulerLab"
       }
-    ]
+    ],
+    "screenshot": "assets/screenshots/eulerlab.jpg"
   }
 ]

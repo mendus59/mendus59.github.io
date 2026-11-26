@@ -343,7 +343,7 @@ function renderSyncNote() {
 
 function renderPreview() {
   const p = readForm();
-  $("preview").replaceChildren(projectCard({ ...p, name: p.name || "Project name" }, { iconSrc: iconSrc(p) }));
+  $("preview").replaceChildren(projectCard({ ...p, name: p.name || "Project name" }, { iconSrc: iconSrc(p), shotSrc: p.screenshot && !/^https?:/i.test(p.screenshot) ? `../${p.screenshot}` : undefined }));
   renderSyncNote();
 }
 
