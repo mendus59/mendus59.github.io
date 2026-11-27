@@ -1,5 +1,43 @@
 [
   {
+    "slug": "lightkeeper",
+    "name": "Lightkeeper",
+    "tagline": "A map and catalogue of US lighthouses with sourced histories, keepers' records and places you can stay the night.",
+    "description": [
+      "Browse lighthouses on a map, or search the list by name, place or state.",
+      "Filter to lighthouses and keeper's quarters that offer overnight stays, with booking details.",
+      "Each lighthouse has key facts, a short history, where its keepers' logs and journals are held, and links to public sites.",
+      "Every fact is cited to a numbered source with the date it was read.",
+      "Each lighthouse has its own shareable link."
+    ],
+    "icon": "assets/icons/lightkeeper.svg",
+    "skills": [
+      "TypeScript",
+      "React",
+      "Leaflet",
+      "Data sourcing"
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Leaflet",
+      "OpenStreetMap"
+    ],
+    "links": [
+      {
+        "label": "Open Lightkeeper",
+        "url": "https://mendus59.github.io/Lightkeeper/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/Lightkeeper"
+      }
+    ],
+    "screenshot": "assets/screenshots/lightkeeper.jpg"
+  },
+  {
     "slug": "notsomagiceye",
     "name": "NotSoMagicEye",
     "tagline": "A phone-friendly web app that reveals the hidden 3D picture in an autostereogram from a photo, and makes new ones from any shape or text.",
