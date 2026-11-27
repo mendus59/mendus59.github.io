@@ -2,13 +2,14 @@
   {
     "slug": "lightkeeper",
     "name": "Lightkeeper",
-    "tagline": "A map and catalogue of US lighthouses with sourced histories, keepers' records and places you can stay the night.",
+    "tagline": "A map and catalogue of more than 900 US lighthouses with sourced histories, keepers' records and places you can stay the night.",
     "description": [
       "Browse lighthouses on a map, or search the list by name, place or state.",
       "Filter to lighthouses and keeper's quarters that offer overnight stays, with booking details.",
-      "Each lighthouse has key facts, a short history, where its keepers' logs and journals are held, and links to public sites.",
-      "Every fact is cited to a numbered source with the date it was read.",
-      "Each lighthouse has its own shareable link."
+      "Each lighthouse has key facts, public links and, where a source has one, a short history.",
+      "Every fact is cited to a numbered source, such as Wikidata or Wikipedia, with the date it was read.",
+      "Each lighthouse has its own shareable link.",
+      "Works on phones, with the map, list and details on their own tabs."
     ],
     "icon": "assets/icons/lightkeeper.svg",
     "skills": [
