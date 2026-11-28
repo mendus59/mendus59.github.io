@@ -1,5 +1,41 @@
 [
   {
+    "slug": "streamsavvy",
+    "name": "StreamSavvy",
+    "tagline": "A US streaming deal finder that shows the cheapest mix of plans, bundles, perks and card credits for the services you already pay for or want to add.",
+    "description": [
+      "Enter what you actually pay for each plan or bundle, including ones you get free or at a promo price.",
+      "Tick the memberships, phone carriers, internet providers and credit cards you have, like Amazon Prime, Walmart+, Verizon, T-Mobile, Xfinity or Amex.",
+      "Add services you're thinking about and see what they would really cost you.",
+      "Get a keep, switch and cancel plan with your new monthly total and yearly savings.",
+      "See other ways to save, such as ad-supported tiers, annual billing and limited-time promos.",
+      "Every price is dated and cited to a source, with a dot showing how well it is confirmed."
+    ],
+    "icon": "assets/icons/streamsavvy.svg",
+    "skills": [
+      "JavaScript",
+      "Optimization",
+      "Data sourcing"
+    ],
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "links": [
+      {
+        "label": "Open StreamSavvy",
+        "url": "https://mendus59.github.io/StreamSavvy/",
+        "primary": true
+      },
+      {
+        "label": "Source",
+        "url": "https://github.com/mendus59/StreamSavvy"
+      }
+    ],
+    "screenshot": "assets/screenshots/streamsavvy.jpg"
+  },
+  {
     "slug": "lightkeeper",
     "name": "Lightkeeper",
     "tagline": "A map and catalogue of more than 900 US lighthouses with sourced histories, keepers' records and places you can stay the night.",
