@@ -5,12 +5,12 @@
     "category": "money",
     "tagline": "A US streaming deal finder that shows the cheapest mix of plans, bundles, perks and card credits for the services you already pay for or want to add.",
     "description": [
+      "Covers 37 services, from Netflix and Disney+ to niche picks like Dropout, Crunchyroll, Shudder, Criterion and BritBox, plus live TV.",
       "Enter what you actually pay for each plan or bundle, including ones you get free or at a promo price.",
-      "Tick the memberships, phone carriers, internet providers and credit cards you have, like Amazon Prime, Walmart+, Verizon, T-Mobile, Xfinity or Amex.",
+      "Tick the memberships, carriers, internet providers, credit cards and discounts you have, like Amazon Prime, Verizon, T-Mobile, Xfinity, Amex or student pricing.",
       "Add services you're thinking about and see what they would really cost you.",
-      "Get a keep, switch and cancel plan with your new monthly total and yearly savings.",
-      "See other ways to save, such as ad-supported tiers, annual billing and limited-time promos.",
-      "Every price is dated and cited to a source, with a dot showing how well it is confirmed."
+      "Get a keep, switch and cancel plan with your new monthly total and yearly savings, plus limited-time promos and codes.",
+      "Prices and deals are refreshed every month."
     ],
     "icon": "assets/icons/streamsavvy.svg",
     "skills": [
@@ -238,7 +238,7 @@
       "Model financing (DSCR, conventional, land, construction, HELOC, seller financing or cash), startup costs and self-managed or Vacasa management.",
       "Set your goal: earn back your cash within a set number of years, or just break even on the mortgage while you use the place.",
       "Rate any Zillow, Redfin or Realtor.com listing with a bookmarklet that fills in the Evaluate form.",
-      "Sign in with Google to save settings and properties, or use it without an account in local mode."
+      "Use it right away as a guest, with saved properties and settings kept in your browser, or sign in with Google to sync them across devices."
     ],
     "icon": "assets/icons/rentalrater.svg",
     "skills": [
@@ -466,7 +466,8 @@
       "A weekly likelihood map per species, built from research-grade iNaturalist sightings, USDA host-tree maps, elevation, and this year's rain and temperature against past finds.",
       "A trail finder that ranks OpenStreetMap trails by the chance of a mushroom along them and how accessible the trail is.",
       "Tap a trail or draw an area to see every tracked mushroom ranked by how likely it is there on a given date.",
-      "Installable as an app and works offline."
+      "Installable as an app and works offline.",
+      "The map and trail finder work without an account; sign in to keep a private journal of finds."
     ],
     "icon": "assets/icons/mushmap.svg",
     "skills": [
@@ -1164,7 +1165,7 @@
       "Events you planned on that change or vanish from the venue's page are flagged, so you know a plan changed.",
       "Draw your own area on a map to find places nearby, new Washington openings from liquor-license notices, and closings.",
       "A Restaurants tab with separate dine-in, takeout and delivery areas, favorites and dislikes for each, and search across menu dishes.",
-      "Sign in with Google or email; it all runs on free tiers of GitHub Pages, GitHub Actions and Firebase."
+      "Try a demo with sample venues and events without an account, or sign in with Google or email to follow your own."
     ],
     "icon": "assets/icons/happenings.svg",
     "skills": [
