@@ -13,6 +13,7 @@ Add an entry to `data/projects.json`:
 | --- | --- |
 | `slug` | Short id, also the card's `#anchor` |
 | `name`, `tagline` | Card title and one-line summary |
+| `category` | Id of the section the card is listed under, from `data/categories.json` (whose order is the page's section order). Cards without a known one go under "Other projects" |
 | `description` | A few short sentences, one per bullet |
 | `icon` | Path to a square image under `assets/icons/` |
 | `skills` | Broad skills; these become the filter chips |

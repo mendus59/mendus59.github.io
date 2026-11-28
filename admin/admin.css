@@ -20,7 +20,7 @@ code { font-size: 0.9em; background: var(--chip); padding: 1px 5px; border-radiu
 .stack-form label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 0.95rem; }
 .stack-form label small { font-weight: 400; }
 .stack-form label.check { flex-direction: row; align-items: center; gap: 8px; font-weight: 400; }
-input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea {
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea, select {
   font: inherit;
   font-weight: 400;
   color: var(--text);
@@ -31,7 +31,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea {
   width: 100%;
   min-width: 0;
 }
-input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 textarea { resize: vertical; }
 fieldset { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 legend { font-weight: 600; padding: 0 4px; }

@@ -26,7 +26,7 @@ export function projectCard(p, { iconSrc, shotSrc } = {}) {
     <div class="card-head">
       ${icon ? `<img class="card-icon" src="${escape(icon)}" alt="" width="56" height="56">` : ""}
       <div>
-        <h3>${escape(p.name)}${p.private ? ' <span class="badge">Private</span>' : ""}</h3>
+        <h4>${escape(p.name)}${p.private ? ' <span class="badge">Private</span>' : ""}</h4>
         <p class="card-tagline">${escape(p.tagline ?? "")}</p>
       </div>
     </div>

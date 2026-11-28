@@ -1,0 +1,9 @@
+[
+  { "id": "outdoors", "name": "Out and about", "blurb": "Places, nature and local life" },
+  { "id": "money", "name": "Money and life decisions" },
+  { "id": "civics", "name": "Civics and ideas" },
+  { "id": "learning", "name": "Learning and science" },
+  { "id": "creative", "name": "Creative tools", "blurb": "Music, images and graphics" },
+  { "id": "utilities", "name": "Web and desktop utilities" },
+  { "id": "games", "name": "Games and fandoms" }
+]
