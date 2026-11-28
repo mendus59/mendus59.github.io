@@ -2,6 +2,7 @@
   {
     "slug": "streamsavvy",
     "name": "StreamSavvy",
+    "category": "money",
     "tagline": "A US streaming deal finder that shows the cheapest mix of plans, bundles, perks and card credits for the services you already pay for or want to add.",
     "description": [
       "Enter what you actually pay for each plan or bundle, including ones you get free or at a promo price.",
@@ -38,6 +39,7 @@
   {
     "slug": "lightkeeper",
     "name": "Lightkeeper",
+    "category": "outdoors",
     "tagline": "A map and catalogue of more than 900 US lighthouses with sourced histories, keepers' records and places you can stay the night.",
     "description": [
       "Browse lighthouses on a map, or search the list by name, place or state.",
@@ -77,6 +79,7 @@
   {
     "slug": "notsomagiceye",
     "name": "NotSoMagicEye",
+    "category": "creative",
     "tagline": "A phone-friendly web app that reveals the hidden 3D picture in an autostereogram from a photo, and makes new ones from any shape or text.",
     "description": [
       "Take a photo with your phone or upload an image, and it finds the pattern's repeat width and decodes a grey depth map.",
@@ -111,6 +114,7 @@
   {
     "slug": "scriptless",
     "name": "Scriptless",
+    "category": "utilities",
     "tagline": "A privacy-first reader: paste a link and get only the article's words, with no scripts, ads, trackers or cookies from the original site.",
     "description": [
       "Fetches the page on a server and sends your browser plain, readable text, so the site never sees your IP address or browser.",
@@ -149,6 +153,7 @@
   {
     "slug": "myactuary",
     "name": "MyActuary",
+    "category": "money",
     "tagline": "Build a personal actuarial life table from U.S. mortality data and evidence-based risk factors, entirely in your browser.",
     "description": [
       "Starts from the SSA 2023 period life table and adjusts it for 30 factors grouped the way life insurers underwrite.",
@@ -186,6 +191,7 @@
   {
     "slug": "manabin",
     "name": "ManaBin",
+    "category": "games",
     "tagline": "A free web app for tracking a Magic: The Gathering collection, with every card and printing and Scryfall-style search.",
     "description": [
       "Open to a dashboard of your collection's value, its change since the last monthly price update, recent additions, decks and binders.",
@@ -224,6 +230,7 @@
   {
     "slug": "rentalrater",
     "name": "RentalRater",
+    "category": "money",
     "tagline": "Rate Washington and Oregon property listings as short-term rental investments, with a Buy, Close or Don't buy verdict for each.",
     "description": [
       "Browse active for-sale listings in coastal, river and STR-hotspot areas of WA and OR, refreshed monthly from RentCast, each with a verdict and the highest offer that still gets a Buy.",
@@ -261,6 +268,7 @@
   {
     "slug": "whaletracker",
     "name": "WhaleTracker",
+    "category": "outdoors",
     "tagline": "Live map of whale and orca sightings around Puget Sound, from public sighting reports, iNaturalist and scientific datasets.",
     "description": [
       "See sightings from Orca Network, Whale Alert and partners (via Acartia), iNaturalist and OBIS on one map.",
@@ -300,6 +308,7 @@
   {
     "slug": "luthierspen",
     "name": "LuthiersPen",
+    "category": "creative",
     "tagline": "Turn a solo guitar recording into classical guitar sheet music you can play back, check against the original and edit, all in the browser.",
     "description": [
       "Transcribe an audio or MP4 video file (all of it or a chosen part), a YouTube video played in the page, or your microphone into classical guitar notation.",
@@ -339,6 +348,7 @@
   {
     "slug": "metabolismmath",
     "name": "MetabolismMath",
+    "category": "learning",
     "tagline": "Estimate how a vitamin or supplement is metabolized from its chemical structure, right in the browser.",
     "description": [
       "A library of 24 vitamins, minerals and supplements, each with its documented absorption, transport, transformation, storage and excretion pathway.",
@@ -375,6 +385,7 @@
   {
     "slug": "sortsight",
     "name": "SortSight",
+    "category": "learning",
     "tagline": "Watch sorting algorithms run line by line, edit their code live, and compare them on the same data.",
     "description": [
       "Eight built-in sorts (Bubble, Selection, Insertion, Cocktail Shaker, Shell, Merge, Quick, Heap) with the running line of code highlighted beside a live bar chart.",
@@ -413,6 +424,7 @@
   {
     "slug": "voidlight",
     "name": "Voidlight",
+    "category": "games",
     "tagline": "An original survivor-style bullet hell for the browser.",
     "description": [
       "Survive 15 minutes of escalating swarms and three bosses on each of 14 levels while your gear fires on its own.",
@@ -447,6 +459,7 @@
   {
     "slug": "mushmap",
     "name": "MushMap",
+    "category": "outdoors",
     "tagline": "A mushroom foraging journal and weekly heat map for Washington and Oregon.",
     "description": [
       "Log a find from a photo: the time and GPS location come from the photo's EXIF data.",
@@ -489,6 +502,7 @@
   {
     "slug": "coastal-forager",
     "name": "Coastal Forager",
+    "category": "outdoors",
     "tagline": "Where and when to go shellfishing in Washington State.",
     "description": [
       "Shows which public beaches are safe and in season for each species, from WA DOH, WDFW and NOAA data synced on a schedule.",
@@ -581,6 +595,7 @@
   {
     "slug": "argument-mapper",
     "name": "Argument Mapper",
+    "category": "civics",
     "tagline": "Parrhesia: lay out debates as shared argument maps and debate more constructively.",
     "description": [
       "Debate as a conversation between two people or teams, with the argument tree of reasons and objections built beside it.",
@@ -622,6 +637,7 @@
   {
     "slug": "gatchi-evolution",
     "name": "Gatchi Evolution",
+    "category": "games",
     "tagline": "Raise a pocket pet that learns by evolution.",
     "description": [
       "Your Gatchi plays ten mini-games on its own, and a genetic algorithm in your browser reshapes its body and brain to get better at whichever one you train.",
@@ -659,6 +675,7 @@
   {
     "slug": "is_this_normal",
     "name": "IsThisNormal",
+    "category": "civics",
     "tagline": "Is a Supreme Court ruling, executive action or contentious law \"normal\"?",
     "description": [
       "Measures each ruling, executive action and contentious law since 2000 against the precedent, statute text and public data that existed when it happened.",
@@ -699,6 +716,7 @@
   {
     "slug": "nominated",
     "name": "Nominated",
+    "category": "games",
     "tagline": "Track every Academy Award–nominated film you've seen.",
     "description": [
       "All 5,264 nominated films and 10,876 nominations since the 1st Academy Awards, with filters by person, category, genre and year.",
@@ -768,6 +786,7 @@
   {
     "slug": "action-mimic",
     "name": "Action Mimic",
+    "category": "utilities",
     "tagline": "A Chrome extension that records and replays front-end QA actions.",
     "description": [
       "Records clicks, typing, selects and navigation, including inside cross-origin iframes, and saves them as a script scoped to a site.",
@@ -1019,6 +1038,7 @@
   {
     "slug": "vectorious",
     "name": "Vectorious",
+    "category": "creative",
     "tagline": "Convert raster images (PNG, JPG, WebP, GIF, BMP) or typed text into detailed SVG vector graphics, entirely in the browser.",
     "description": [
       "Traces each color layer with a built-in Potrace implementation into smooth Bezier curves, with no AI and nothing uploaded.",
@@ -1054,6 +1074,7 @@
   {
     "slug": "webwander",
     "name": "WebWander",
+    "category": "utilities",
     "tagline": "Wander the fun, weird and creative corners of the web, one click at a time.",
     "description": [
       "A daily crawler finds creative, obscure and weird sites from Hacker News, Marginalia, Lobsters and more, and scores them with plain heuristics, not AI.",
@@ -1089,6 +1110,7 @@
   {
     "slug": "yt-dlp-gui",
     "name": "YT Downloader (yt-dlp GUI)",
+    "category": "utilities",
     "tagline": "A free Windows desktop app that puts a simple window on top of yt-dlp, with a web app that opens it with your settings filled in.",
     "description": [
       "Paste video, playlist or channel URLs and download video, with a maximum and minimum quality, or audio only as mp3, m4a, opus, wav or flac.",
@@ -1134,6 +1156,7 @@
   {
     "slug": "happenings",
     "name": "Happenings",
+    "category": "outdoors",
     "tagline": "One calendar for the events at the small businesses and venues you love.",
     "description": [
       "Save any venue's events page and Happenings checks it every few hours, gathering everything into one list and calendar.",
@@ -1175,6 +1198,7 @@
   {
     "slug": "investing-barometer",
     "name": "Investing Barometer",
+    "category": "money",
     "tagline": "A static web page, hosted on GitHub Pages, that reads current interest rates, bond yields, market index returns and housing data once a day and turns them…",
     "description": [],
     "icon": "assets/icons/investing-barometer.svg",
@@ -1205,6 +1229,7 @@
   {
     "slug": "eulerlab",
     "name": "EulerLab",
+    "category": "learning",
     "tagline": "A learning companion for mathematics, starting with differential equations.",
     "description": [],
     "icon": "assets/icons/eulerlab.svg",

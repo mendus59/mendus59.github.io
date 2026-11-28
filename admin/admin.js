@@ -92,6 +92,23 @@ async function loadFromGitHub() {
   state.saved = data;
   state.projects = structuredClone(data);
   clearIcons();
+  await loadCategories(sha);
+}
+
+// The section list comes from data/categories.json; the editor's Category menu offers these.
+async function loadCategories(sha) {
+  let cats = [];
+  try {
+    const file = await gh(`/contents/data/categories.json?ref=${sha}`);
+    cats = JSON.parse(b64ToText(file.content));
+  } catch {
+    // No categories file: every card shows under "Other projects".
+  }
+  const sel = form().category;
+  sel.replaceChildren(
+    new Option("Other projects (no category)", ""),
+    ...cats.map((c) => new Option(c.name, c.id)),
+  );
 }
 
 // One commit with projects.json plus any uploaded icons, fast-forwarded onto main.
@@ -222,6 +239,8 @@ function openEditor(index) {
   f.slug.value = p.slug ?? "";
   f.slug.dataset.auto = index === -1 ? "1" : "";
   f.tagline.value = p.tagline ?? "";
+  if (p.category && ![...f.category.options].some((o) => o.value === p.category)) f.category.add(new Option(p.category, p.category));
+  f.category.value = p.category ?? "";
   f.description.value = (p.description ?? []).join("\n");
   f.skills.value = (p.skills ?? []).join(", ");
   f.stack.value = (p.stack ?? []).join(", ");
@@ -283,6 +302,7 @@ function readForm() {
   const p = {
     slug: f.slug.value.trim(),
     name: f.name.value.trim(),
+    category: f.category.value || undefined,
     tagline: f.tagline.value.trim(),
     description: f.description.value.split("\n").map((x) => x.trim()).filter(Boolean),
     icon: f.icon.value.trim() || undefined,
@@ -300,7 +320,7 @@ function readForm() {
   // Keep any fields this form doesn't know about.
   const orig = state.editing >= 0 ? state.projects[state.editing] : {};
   const extra = Object.fromEntries(
-    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "private", "hidden", "summarySync", "iconSync", "linkSync", "autoHidden"].includes(k)),
+    Object.entries(orig).filter(([k]) => !(k in p) && !["icon", "category", "private", "hidden", "summarySync", "iconSync", "linkSync", "autoHidden"].includes(k)),
   );
   if (orig.autoHidden && p.hidden) p.autoHidden = true;
   return { ...p, ...extra };

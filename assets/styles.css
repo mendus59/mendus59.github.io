@@ -70,6 +70,11 @@ a { color: var(--accent); }
 /* As many ~340px columns as fit: 1 on phones, 2 on tablets, 3-4 on laptops, 5-6 on wide monitors. */
 .projects { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
 
+.category + .category { margin-top: 40px; }
+.category-head { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; margin-bottom: 14px; }
+.category-head h3 { margin: 0; font-size: 1.15rem; }
+.category-blurb { flex-basis: 100%; margin: 2px 0 0; font-size: 0.95rem; }
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -95,7 +100,7 @@ a { color: var(--accent); }
 .card-head { display: flex; gap: 14px; align-items: flex-start; }
 .card-head > div { min-width: 0; }
 .card-icon { border-radius: 12px; flex: none; }
-.card h3 { margin: 2px 0 2px; font-size: 1.2rem; }
+.card h4 { margin: 2px 0 2px; font-size: 1.2rem; }
 .card-tagline { margin: 0; color: var(--muted); }
 .card-points { margin: 16px 0; padding-left: 20px; }
 .card-points li { margin-bottom: 6px; }
@@ -132,6 +137,7 @@ a { color: var(--accent); }
 @media (max-width: 600px) {
   .site-header { padding: 32px 0 20px; }
   .projects { gap: 14px; }
+  .category + .category { margin-top: 28px; }
   .card { padding: 16px; border-radius: 14px; }
   .card-icon { width: 48px; height: 48px; }
   .card-shot-link { margin: -16px -16px 14px; }
